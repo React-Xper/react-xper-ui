@@ -30,5 +30,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "bit": {
+    "env": {},
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "yarn"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.42",
+    "@types/react-dom": "^16.9.8",
+    "typescript": "^3.9.6"
   }
 }
