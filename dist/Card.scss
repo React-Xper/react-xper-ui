@@ -1,9 +1,9 @@
 .rts-ui {
   &__card {
     min-width: 100px;
-    width: 100%;
+    min-height: 100px;
     height: 100%;
-
+    padding: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
 }

@@ -1,3 +1,3 @@
-/// <reference types="react" />
+import React from "react";
 import "./Card.scss";
-export default function CardComponent({ children, style }: any): JSX.Element;
+export default function Card({ children, ...props }: React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>): JSX.Element;
