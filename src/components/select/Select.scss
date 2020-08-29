@@ -1,9 +1,29 @@
-@import "../../_mixins";
-@import "../../variables";
+@import "src/styles/_mixins";
+@import "src/styles/variables";
 
 .rts-ui {
   &__select {
+    width: 200px;
     min-width: 200px;
-    padding: 8px;
+    padding: 4px;
+    min-height: 25px;
+    position: relative;
+
+    border: solid 1.5px $primary;
+    border-radius: 4px;
+
+    &:hover {
+      @include rts-ui--pointer;
+    }
+
+    &__arrow {
+      right: 8px;
+      bottom: 4px;
+      position: absolute;
+    }
+
+    select {
+      display: none;
+    }
   }
 }

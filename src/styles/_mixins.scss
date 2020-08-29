@@ -6,3 +6,7 @@
   -ms-user-select: none;
   user-select: none;
 }
+
+@mixin rts-ui--pointer {
+  cursor: pointer;
+}

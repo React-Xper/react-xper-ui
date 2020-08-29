@@ -19,21 +19,11 @@ function App() {
   return (
     <div>
       <h1>Component Tests</h1>
-      <TextInput
-        label="Enter your phone"
-        prefix="+65"
-        numberOnly
-        onChange={handleOnChange}
-        onError={handleOnError}
-        value={text}
-        maxLength={10}
-        required
-      />
-      <hr/>
-      <Card>{text}</Card>
-      <Card>{error}</Card>
-      <hr/>
-      <Select />
+      <Select>
+        <option>1. Hello</option>
+        <option>2. World</option>
+        <option>3. Dev</option>
+      </Select>
     </div>
   );
 }
