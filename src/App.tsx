@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TextInput from "./components/text-input";
 import Card from "./components/card";
+import Select from "./components/select";
 
 function App() {
   const [text, setText] = useState("97330256");
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <div>
+      <h1>Component Tests</h1>
       <TextInput
         label="Enter your phone"
         prefix="+65"
@@ -27,8 +29,11 @@ function App() {
         maxLength={10}
         required
       />
+      <hr/>
       <Card>{text}</Card>
       <Card>{error}</Card>
+      <hr/>
+      <Select />
     </div>
   );
 }

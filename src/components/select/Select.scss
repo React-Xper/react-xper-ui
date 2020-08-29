@@ -1,0 +1,9 @@
+@import "../../_mixins";
+@import "../../variables";
+
+.rts-ui {
+  &__select {
+    min-width: 200px;
+    padding: 8px;
+  }
+}
