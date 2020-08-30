@@ -105,5 +105,33 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "select": {
+        "files": [
+            {
+                "relativePath": "src/components/select/README.md",
+                "test": false,
+                "name": "README.md"
+            },
+            {
+                "relativePath": "src/components/select/Select.scss",
+                "test": false,
+                "name": "Select.scss"
+            },
+            {
+                "relativePath": "src/components/select/Select.tsx",
+                "test": false,
+                "name": "Select.tsx"
+            },
+            {
+                "relativePath": "src/components/select/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/select/index.js",
+        "trackDir": "src/components/select",
+        "origin": "AUTHORED",
+        "exported": false
+    },
     "version": "14.8.7"
 }
