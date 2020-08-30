@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useReducer } from "react";
 import "./Select.scss";
-import { ReactComponent as Chevron } from "../../assets/icons/chevron.svg";
+import { Chevron } from "./SelectChevron";
 const selectedState = {
     title: "",
     value: "",

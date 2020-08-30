@@ -2,6 +2,7 @@ import React, { useState } from "react";
 //import TextInput from "./components/text-input";
 //import Card from "./components/card";
 import Select from "./components/select";
+import TextInput from "./components/text-input";
 
 function App() {
   const [text, setText] = useState("");
@@ -38,6 +39,8 @@ function App() {
         <option value="3">3. Dev</option>
       </Select>
       <div>{text}</div>
+      <hr/>
+      <TextInput/>
     </div>
   );
 }

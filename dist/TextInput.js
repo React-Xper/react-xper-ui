@@ -11,8 +11,14 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React, { useState, useEffect, useRef } from "react";
 import "./TextInput.scss";
-import { REGEX } from "./constants/REGEX";
-import { KEY_CODES } from "./constants/KEY_CODES";
+const REGEX = {
+    alphabets: /^[A-Za-z]+$/,
+    alphanumeric: /^[A-Za-z0-9]+$/,
+    numbers: /^[0-9]+$/,
+};
+const KEY_CODES = {
+    backspace: 8,
+};
 export default function TextInput(_a) {
     var { label = "", prefix = "", numberOnly = false, showError = false, maxLength, required = false, type = "text", value: parentValue, onChange, onKeyDown, onError, onKeyUp, onFocus, onBlur } = _a, props = __rest(_a, ["label", "prefix", "numberOnly", "showError", "maxLength", "required", "type", "value", "onChange", "onKeyDown", "onError", "onKeyUp", "onFocus", "onBlur"]);
     const [focused, setFocused] = useState(false);

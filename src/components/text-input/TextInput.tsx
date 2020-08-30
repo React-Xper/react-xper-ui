@@ -1,7 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./TextInput.scss";
-import { REGEX } from "../../constants/REGEX";
-import { KEY_CODES } from "../../constants/KEY_CODES";
+
+const REGEX = {
+  alphabets: /^[A-Za-z]+$/,
+  alphanumeric: /^[A-Za-z0-9]+$/,
+  numbers: /^[0-9]+$/,
+};
+
+const KEY_CODES = {
+  backspace: 8,
+};
 
 interface ITextInput
   extends React.DetailedHTMLProps<

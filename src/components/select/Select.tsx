@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useReducer } from "react";
 import "./Select.scss";
-import { ReactComponent as Chevron } from "../../assets/icons/chevron.svg";
+import { Chevron } from "./SelectChevron";
 
 interface IAction {
   payload: any;
@@ -31,7 +31,9 @@ const selectedReducer = (state = selectedState, action: IAction) => {
 };
 
 export default function Select(props: ISelect) {
-  const { children, title, defaultValue: value, native, onChange } = props;
+  const { children, title, defaultValue: value, onChange } = props;
+
+  const { native, ...rest } = props;
 
   const [selected, setSelected] = useReducer(selectedReducer, {
     ...selectedState,
@@ -87,7 +89,7 @@ export default function Select(props: ISelect) {
   return (
     <>
       {!!native ? (
-        <select className="rts-ui__select" {...props}>
+        <select className="rts-ui__select" {...rest}>
           {children}
         </select>
       ) : (
