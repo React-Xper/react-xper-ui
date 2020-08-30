@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useReducer } from "react";
+import React, { useState, useEffect, useRef, useReducer, StyleHTMLAttributes } from "react";
 import "./Select.scss";
 import { Chevron } from "./SelectChevron";
 
@@ -18,6 +18,7 @@ interface ISelect {
   defaultValue?: string;
   native?: boolean;
   onChange?: any;
+  style?: StyleHTMLAttributes<HTMLSelectElement>
 }
 
 const selectedState: ISelected = {
@@ -33,7 +34,7 @@ const selectedReducer = (state = selectedState, action: IAction) => {
 export default function Select(props: ISelect) {
   const { children, title, defaultValue: value, onChange } = props;
 
-  const { native, ...rest } = props;
+  const { native, style, ...rest } = props;
 
   const [selected, setSelected] = useReducer(selectedReducer, {
     ...selectedState,
@@ -89,7 +90,7 @@ export default function Select(props: ISelect) {
   return (
     <>
       {!!native ? (
-        <select className="rts-ui__select" {...rest}>
+        <select className="rts-ui__select" {...rest} style={style}>
           {children}
         </select>
       ) : (
@@ -98,6 +99,7 @@ export default function Select(props: ISelect) {
             className="rts-ui__select"
             onClick={handleClickSelect}
             onBlur={handleClickSelect}
+            style={style}
           >
             <div className="rts-ui__select__visible">
               <label>{selected.title}</label>
