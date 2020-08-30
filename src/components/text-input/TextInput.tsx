@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./TextInput.scss";
-import { REGEX } from "src/constants/REGEX";
-import { KEY_CODES } from "src/constants/KEY_CODES";
+import { REGEX } from "../../constants/REGEX";
+import { KEY_CODES } from "../../constants/KEY_CODES";
 
 interface ITextInput
   extends React.DetailedHTMLProps<

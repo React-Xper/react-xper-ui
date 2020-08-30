@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef, useReducer, Reducer } from "react";
+import React, { useState, useEffect, useRef, useReducer } from "react";
 import "./Select.scss";
-import { ReactComponent as Chevron } from "src/assets/icons/chevron.svg";
+import { ReactComponent as Chevron } from "../../assets/icons/chevron.svg";
 
 interface IAction {
   payload: any;
@@ -82,7 +82,7 @@ export default function Select(props: ISelect) {
       }
       setOptions(optionArray);
     }
-  }, []);
+  }, [native]);
 
   return (
     <>
@@ -92,7 +92,11 @@ export default function Select(props: ISelect) {
         </select>
       ) : (
         <>
-          <div className="rts-ui__select" onClick={handleClickSelect} onBlur={handleClickSelect}>
+          <div
+            className="rts-ui__select"
+            onClick={handleClickSelect}
+            onBlur={handleClickSelect}
+          >
             <div className="rts-ui__select__visible">
               <label>{selected.title}</label>
               <i className="rts-ui__select__arrow">
