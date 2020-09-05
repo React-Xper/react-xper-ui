@@ -152,12 +152,11 @@ export default function TextInput({
   };
 
   return (
-    <div className="rts-ui__text-input">
+    <div className={`rts-ui__text-input ${error ? "text-input--error" : ""}`}>
       <input
         type={type}
         ref={inputRef}
         className={`rts-ui__text-input__input 
-        ${error ? "--onerror" : ""}
         ${!label ? "--nolabel" : ""}`}
         {...props}
         onFocus={handleOnFocus}
