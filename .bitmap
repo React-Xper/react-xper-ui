@@ -90,7 +90,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "m3yevn.reacthesis-ui/text-input@1.0.2": {
+    "m3yevn.reacthesis-ui/text-input@1.0.3": {
         "files": [
             {
                 "relativePath": "src/components/text-input/README.md",

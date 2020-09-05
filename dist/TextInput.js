@@ -116,9 +116,8 @@ export default function TextInput(_a) {
             onKeyDown(e);
         }
     };
-    return (React.createElement("div", { className: "rts-ui__text-input" },
+    return (React.createElement("div", { className: `rts-ui__text-input ${error ? "text-input--error" : ""}` },
         React.createElement("input", Object.assign({ type: type, ref: inputRef, className: `rts-ui__text-input__input 
-        ${error ? "--onerror" : ""}
         ${!label ? "--nolabel" : ""}` }, props, { onFocus: handleOnFocus, onBlur: handleOnBlur, onChange: handleOnChange, onError: handleOnError, onKeyDown: handleOnKeyDown, onKeyUp: handleOnKeyUp, value: value })),
         !!label && (React.createElement("label", { className: `rts-ui__text-input__label 
           ${focused ? "--onfocus" : ""}

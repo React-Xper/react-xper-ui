@@ -23,19 +23,18 @@ $whitesmoke: #f3f3f3;
     flex-direction: column;
     font-family: inherit;
     position: relative;
+    border: solid 1.8px $primary;
+
+    &.text-input--error {
+      border-color: $danger;
+    }
 
     &__input {
       padding: 15px 2px 8px 5px;
+      outline: none;
       min-width: 330px;
       font-size: 16px;
-
-      &:focus {
-        outline-color: $primary;
-      }
-
-      &.--onerror {
-        outline-color: $danger;
-      }
+      border: none;
 
       &.--nolabel {
         padding: 8px 2px 8px 5px;
