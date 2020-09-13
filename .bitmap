@@ -118,7 +118,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "m3yevn.reacthesis-ui/translator@1.0.1": {
+    "m3yevn.reacthesis-ui/translator@1.0.4": {
         "files": [
             {
                 "relativePath": "src/components/translator/README.md",
