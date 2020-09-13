@@ -1,5 +1,11 @@
 import React from "react";
 
+/**
+ * @name  Chevron
+ * @description Chevron svg icon
+ * @usedBy Select
+ * @details https://bit.dev/m3yevn/reacthesis-ui/select
+ */
 export const Chevron = () => {
   return (
     <svg

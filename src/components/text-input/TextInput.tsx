@@ -24,6 +24,11 @@ interface ITextInput
   type?: "text" | "password";
 }
 
+/**
+ * @name  TextInput
+ * @description TextInput JSX element
+ * @details https://bit.dev/m3yevn/reacthesis-ui/text-input
+ */
 export default function TextInput({
   label = "",
   prefix = "",

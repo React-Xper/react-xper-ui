@@ -1,12 +1,20 @@
 import React, { useState } from "react";
-//import Card from "./components/card";
 import Select from "./components/select";
 import TextInput from "./components/text-input";
 import Button from "./components/button";
+import { TranslateProvider, Translatable } from "./components/translator";
+
+import en from "./assets/localization/en.json";
+import zh_cn from "./assets/localization/zh-cn.json";
 
 function App() {
   const [text, setText] = useState("");
   const [error, setError] = useState("");
+
+  const languageSet = {
+    English: en,
+    Chinese: zh_cn,
+  };
 
   const handleOnTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setError("");
@@ -31,7 +39,6 @@ function App() {
         <option value="3">3. Dev</option>
       </Select>
       <div>{text}</div>
-      <hr />
       <Select native onChange={handleOnChange} title="Select One">
         <option value="">Select One</option>
         <option value="1">1. Hello</option>
@@ -46,15 +53,25 @@ function App() {
         numberOnly
         value={text}
         onChange={handleOnTextChange}
+        onError={handleOnError}
         maxLength={10}
         required
       />
       <br />
+      <div>{error}</div>
+      <hr/>
       <div style={{ maxWidth: "200px" }}>
         <Button shape="sharp" color="black">
           Click Me!
         </Button>
       </div>
+      <br />
+      <hr/>
+      <TranslateProvider src={languageSet}>
+        <Translatable text="hello" language="English" />
+        <br />
+        <Translatable text="hello" language="Chinese" />
+      </TranslateProvider>
     </div>
   );
 }

@@ -90,7 +90,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "m3yevn.reacthesis-ui/text-input@1.0.3": {
+    "m3yevn.reacthesis-ui/text-input@1.0.4": {
         "files": [
             {
                 "relativePath": "src/components/text-input/README.md",
@@ -115,6 +115,29 @@
         ],
         "mainFile": "src/components/text-input/index.js",
         "trackDir": "src/components/text-input",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "m3yevn.reacthesis-ui/translator@1.0.1": {
+        "files": [
+            {
+                "relativePath": "src/components/translator/README.md",
+                "test": false,
+                "name": "README.md"
+            },
+            {
+                "relativePath": "src/components/translator/Translator.tsx",
+                "test": false,
+                "name": "Translator.tsx"
+            },
+            {
+                "relativePath": "src/components/translator/index.js",
+                "test": false,
+                "name": "index.js"
+            }
+        ],
+        "mainFile": "src/components/translator/index.js",
+        "trackDir": "src/components/translator",
         "origin": "AUTHORED",
         "exported": true
     },

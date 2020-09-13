@@ -1,4 +1,10 @@
-import React, { useState, useEffect, useRef, useReducer, StyleHTMLAttributes } from "react";
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  useReducer,
+  StyleHTMLAttributes,
+} from "react";
 import "./Select.scss";
 import { Chevron } from "./SelectChevron";
 
@@ -18,7 +24,7 @@ interface ISelect {
   defaultValue?: string;
   native?: boolean;
   onChange?: any;
-  style?: StyleHTMLAttributes<HTMLSelectElement>
+  style?: StyleHTMLAttributes<HTMLSelectElement>;
 }
 
 const selectedState: ISelected = {
@@ -31,6 +37,11 @@ const selectedReducer = (state = selectedState, action: IAction) => {
   return reducedState;
 };
 
+/**
+ * @name  Select
+ * @description Select JSX element
+ * @details https://bit.dev/m3yevn/reacthesis-ui/select
+ */
 export default function Select(props: ISelect) {
   const { children, title, defaultValue: value, onChange } = props;
 

@@ -1,6 +1,12 @@
 import React from "react";
 import "./Button.scss";
 
+/**
+ * @name IButton
+ * @property {theme?}
+ * @property {shape?}
+ * @description Props interface for Button JSX element
+ */
 interface IButton
   extends React.DetailedHTMLProps<
     React.HTMLAttributes<HTMLButtonElement>,
@@ -10,6 +16,11 @@ interface IButton
   shape?: "sharp" | "rounded";
 }
 
+/**
+ * @name  Button
+ * @description Button JSX element
+ * @details https://bit.dev/m3yevn/reacthesis-ui/button
+ */
 export default function Button({
   children,
   color,
