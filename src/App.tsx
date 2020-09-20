@@ -6,6 +6,7 @@ import { TranslateProvider, Translatable } from "./components/translator";
 
 import en from "./assets/localization/en.json";
 import zh_cn from "./assets/localization/zh-cn.json";
+import DatePicker from "./components/date-picker";
 
 function App() {
   const [text, setText] = useState("");
@@ -59,19 +60,34 @@ function App() {
       />
       <br />
       <div>{error}</div>
-      <hr/>
+      <hr />
       <div style={{ maxWidth: "200px" }}>
         <Button shape="sharp" color="black">
           Click Me!
         </Button>
       </div>
       <br />
-      <hr/>
+      <hr />
       <TranslateProvider src={languageSet}>
         <Translatable text="hello" language="English" />
         <br />
         <Translatable text="hello" language="Chinese" />
       </TranslateProvider>
+      <br />
+      <hr />
+      <form
+        style={{ maxWidth: "340px" }}
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+      >
+        <DatePicker native />
+        <br/>
+        <br/>
+        <Button type="submit" shape="sharp" color="black">
+          Submit date
+        </Button>
+      </form>
     </div>
   );
 }

@@ -14,6 +14,7 @@ interface IButton
   > {
   theme?: "dark" | "light";
   shape?: "sharp" | "rounded";
+  type?: "submit" | "button";
 }
 
 /**
@@ -26,10 +27,12 @@ export default function Button({
   color,
   shape,
   theme,
+  type,
   ...props
 }: IButton) {
   return (
     <button
+      type={type}
       className={`rts-ui__button rts-ui__button--${color}${
         theme ? `--${theme}` : ""
       } ${shape ? `rts-ui__button--${shape}` : ""}
