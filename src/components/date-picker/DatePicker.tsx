@@ -10,6 +10,7 @@ interface IDatePicker
   value?: any;
   minDate?: string;
   maxDate?: string;
+  type?: string;
 }
 
 /**
@@ -43,6 +44,7 @@ export default function DatePicker({
   value,
   minDate = getMinDate(100),
   maxDate = getMaxDate(100),
+  type = "datetime-local",
   ...props
 }: IDatePicker) {
   return (
@@ -50,7 +52,7 @@ export default function DatePicker({
       {!native && <div></div>}
       {!!native && (
         <input
-          type="date"
+          type={type}
           placeholder={placeholder}
           value={value}
           min={minDate}

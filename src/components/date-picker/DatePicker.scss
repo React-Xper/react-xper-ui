@@ -6,7 +6,7 @@ $whitesmoke: #f3f3f3;
 
 .rts-ui {
   &__datepicker {
-    input[type="date"] {
+    input[type="datetime-local"] {
       min-width: 330px;
       padding: 15px 2px 8px 5px;
       outline: none;
