@@ -7,6 +7,7 @@ import { TranslateProvider, Translatable } from "./components/translator";
 import en from "./assets/localization/en.json";
 import zh_cn from "./assets/localization/zh-cn.json";
 import DatePicker from "./components/date-picker";
+import toast, { ToastContainer } from "./components/toast";
 
 function App() {
   const [text, setText] = useState("");
@@ -79,13 +80,60 @@ function App() {
         style={{ maxWidth: "340px" }}
         onSubmit={(e) => {
           e.preventDefault();
-        }}
-      >
+        }}>
         <DatePicker native />
-        <br/>
-        <br/>
+        <br />
+        <br />
         <Button type="submit" shape="sharp" color="black">
           Submit date
+        </Button>
+        <br />
+        <br />
+        <ToastContainer />
+        <Button
+          type="submit"
+          shape="sharp"
+          color="primary"
+          onClick={() => {
+            toast.error("🎉 Yayy!! Toast is displayed!");
+          }}>
+          Show toast error
+        </Button>
+        <Button
+          type="submit"
+          shape="sharp"
+          color="primary"
+          onClick={() => {
+            toast("🎉 Yayy!! Toast is displayed!");
+          }}>
+          Show toast normal
+        </Button>
+        <Button
+          type="submit"
+          shape="sharp"
+          color="primary"
+          onClick={() => {
+            toast.success("🎉 Yayy!! Toast is displayed!");
+          }}>
+          Show toast success
+        </Button>
+        <Button
+          type="submit"
+          shape="sharp"
+          color="primary"
+          onClick={() => {
+            toast.info("🎉 Yayy!! Toast is displayed!");
+          }}>
+          Show toast info
+        </Button>
+        <Button
+          type="submit"
+          shape="sharp"
+          color="primary"
+          onClick={() => {
+            toast.warn("🎉 Yayy!! Toast is displayed!");
+          }}>
+          Show toast warn
         </Button>
       </form>
     </div>
