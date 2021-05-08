@@ -44,6 +44,7 @@ export default function TextInput({
   onKeyUp,
   onFocus,
   onBlur,
+  className = "",
   ...props
 }: ITextInput) {
   const [focused, setFocused] = useState(false);
@@ -157,7 +158,10 @@ export default function TextInput({
   };
 
   return (
-    <div className={`rts-ui__text-input ${error ? "text-input--error" : ""}`}>
+    <div
+      className={`${className} rts-ui__text-input ${
+        error ? "text-input--error" : ""
+      }`.trim()}>
       <input
         type={type}
         ref={inputRef}
@@ -176,8 +180,7 @@ export default function TextInput({
         <label
           className={`rts-ui__text-input__label 
           ${focused ? "--onfocus" : ""}
-          ${error ? "--onerror" : ""}`}
-        >
+          ${error ? "--onerror" : ""}`}>
           {label}
         </label>
       )}

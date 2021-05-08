@@ -8,13 +8,14 @@ import "./Card.scss";
  */
 export default function Card({
   children,
+  className = "",
   ...props
 }: React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLDivElement>,
   HTMLDivElement
 >) {
   return (
-    <div className="rts-ui__card" {...props}>
+    <div className={`${className} rts-ui__card`.trim()} {...props}>
       {children}
     </div>
   );

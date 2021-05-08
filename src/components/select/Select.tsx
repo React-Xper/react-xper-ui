@@ -18,7 +18,6 @@ interface ISelected {
   value: any;
 }
 
-
 interface ISelect {
   children: React.ReactNode;
   title?: string;
@@ -26,6 +25,7 @@ interface ISelect {
   native?: boolean;
   onChange?: any;
   style?: StyleHTMLAttributes<HTMLSelectElement>;
+  className?: string;
 }
 
 const selectedState: ISelected = {
@@ -44,7 +44,13 @@ const selectedReducer = (state = selectedState, action: IAction) => {
  * @details https://bit.dev/m3yevn/reacthesis-ui/select
  */
 export default function Select(props: ISelect) {
-  const { children, title, defaultValue: value, onChange } = props;
+  const {
+    children,
+    title,
+    defaultValue: value,
+    onChange,
+    className = "",
+  } = props;
 
   const { native, style, ...rest } = props;
 
@@ -102,17 +108,19 @@ export default function Select(props: ISelect) {
   return (
     <>
       {!!native ? (
-        <select className="rts-ui__select" {...rest} style={style}>
+        <select
+          className={`${className} rts-ui__select`.trim()}
+          {...rest}
+          style={style}>
           {children}
         </select>
       ) : (
         <>
           <div
-            className="rts-ui__select"
+            className={`${className} rts-ui__select`.trim()}
             onClick={handleClickSelect}
             onBlur={handleClickSelect}
-            style={style}
-          >
+            style={style}>
             <div className="rts-ui__select__visible">
               <label>{selected.title}</label>
               <i className="rts-ui__select__arrow">
@@ -122,8 +130,7 @@ export default function Select(props: ISelect) {
             <select
               ref={selectRef}
               className="rts-ui__select--hidden"
-              {...props}
-            >
+              {...props}>
               {children}
             </select>
             {toggleShowOpts && (
@@ -141,8 +148,7 @@ export default function Select(props: ISelect) {
                         id={index.toString()}
                         onClick={() => {
                           handleClickLink(option);
-                        }}
-                      >
+                        }}>
                         {option.title}
                       </li>
                     ))}

@@ -1,14 +1,14 @@
 const toastEvent = {
-  eventManager: {},
-  on: function (eventName, callback) {
+  eventManager: {} as any,
+  on: function (eventName: string, callback: Function) {
     this.eventManager[eventName] = callback;
   },
 
-  off: function (eventName) {
+  off: function (eventName: string) {
     delete this.eventManager?.[eventName];
   },
 
-  emit: function (eventName, message) {
+  emit: function (eventName: string, message: string) {
     const eventCallback = this.eventManager[eventName];
 
     if (typeof eventCallback === "function") {

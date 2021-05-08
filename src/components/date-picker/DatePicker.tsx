@@ -45,10 +45,11 @@ export default function DatePicker({
   minDate = getMinDate(100),
   maxDate = getMaxDate(100),
   type = "datetime-local",
+  className = "",
   ...props
 }: IDatePicker) {
   return (
-    <div className="rts-ui__datepicker" {...props}>
+    <div className={`${className} rts-ui__datepicker`.trim()} {...props}>
       {!native && <div></div>}
       {!!native && (
         <input

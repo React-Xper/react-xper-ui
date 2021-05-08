@@ -29,6 +29,7 @@ export function ToastContainer({
   position = "top-right",
   autoClear = true,
   autoClearDuration = 3000,
+  className = "",
   ...props
 }: IToast) {
   const [events, setEvents] = React.useState<any[]>([]);
@@ -66,7 +67,9 @@ export function ToastContainer({
   return (
     <div>
       {!!events?.length && (
-        <div className={`rts-ui__toast toast--${position}`} {...props}>
+        <div
+          className={`${className} rts-ui__toast toast--${position}`.trim()}
+          {...props}>
           {events.map((evt) => {
             return (
               <div className={`toast-component toast-component--${evt.type}`}>
