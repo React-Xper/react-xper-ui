@@ -1,0 +1,62 @@
+.rts-ui__toast {
+  z-index: 9999;
+  position: fixed;
+}
+
+.toast--top-right {
+  top: 16px;
+  right: 16px;
+}
+
+.toast-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: white;
+  height: 12px;
+}
+
+.--normal {
+  fill: black;
+}
+
+.toast-component {
+  margin: 8px;
+  min-width: 320px;
+  min-height: 60px;
+  position: relative;
+
+  box-sizing: border-box;
+  padding: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.--normal {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.--success {
+  background-color: rgb(67, 212, 67);
+  color: white;
+}
+
+.--error {
+  background-color: #e0304d;
+  color: white;
+}
+
+.--info {
+  background-color: #3d8aa0;
+  color: white;
+}
+
+.--warn {
+  background-color: rgb(245, 193, 21);
+  color: white;
+}

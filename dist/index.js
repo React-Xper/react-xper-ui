@@ -1,62 +1,14 @@
-import toastEvent from "./ToastEvent";
-
-
-
 /**
 
- * @name Toast
+ * @name Translator
 
- * @consists {ToastContainer}
+ * @consists {TranslateProvider}
 
- * @consists {toast}
+ * @consists {Translatable}
 
- * @description ToastContainer and toast() function for displaying messages
+ * @description TranslateProvider and Translatable JSX elements for localization
 
  */
 
-export * from "./Toast";
-
-
-
-const toast = (message) => {
-
-  toastEvent.emit("normal", message);
-
-};
-
-
-
-toast.error = (message) => {
-
-  toastEvent.emit("error", message);
-
-};
-
-
-
-toast.success = (message) => {
-
-  toastEvent.emit("success", message);
-
-};
-
-
-
-toast.warn = (message) => {
-
-  toastEvent.emit("warn", message);
-
-};
-
-
-
-toast.info = (message) => {
-
-  toastEvent.emit("info", message);
-
-};
-
-
-
-export default toast;
+export * from "./Translator";
 

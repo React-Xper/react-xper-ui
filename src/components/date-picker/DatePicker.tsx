@@ -1,5 +1,5 @@
 import React from "react";
-import "./DatePicker.scss";
+import styles from "./DatePicker.module.css";
 
 interface IDatePicker
   extends React.DetailedHTMLProps<
@@ -49,7 +49,7 @@ export default function DatePicker({
   ...props
 }: IDatePicker) {
   return (
-    <div className={`${className} rts-ui__datepicker`.trim()} {...props}>
+    <div className={`${className} ${styles["rts-ui__datepicker"]}`} {...props}>
       {!native && <div></div>}
       {!!native && (
         <input

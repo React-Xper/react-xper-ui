@@ -63,9 +63,7 @@ function App() {
       <div>{error}</div>
       <hr />
       <div style={{ maxWidth: "200px" }}>
-        <Button shape="sharp" color="black">
-          Click Me!
-        </Button>
+        <Button color="black">Click Me!</Button>
       </div>
       <br />
       <hr />
@@ -84,7 +82,7 @@ function App() {
         <DatePicker native />
         <br />
         <br />
-        <Button type="submit" shape="sharp" color="black">
+        <Button type="submit" color="black">
           Submit date
         </Button>
         <br />
@@ -92,7 +90,6 @@ function App() {
         <ToastContainer />
         <Button
           type="submit"
-          shape="sharp"
           color="primary"
           onClick={() => {
             toast.error("🎉 Yayy!! Toast is displayed!");
@@ -101,7 +98,6 @@ function App() {
         </Button>
         <Button
           type="submit"
-          shape="sharp"
           color="primary"
           onClick={() => {
             toast("🎉 Yayy!! Toast is displayed!");
@@ -110,7 +106,6 @@ function App() {
         </Button>
         <Button
           type="submit"
-          shape="sharp"
           color="primary"
           onClick={() => {
             toast.success("🎉 Yayy!! Toast is displayed!");
@@ -119,7 +114,6 @@ function App() {
         </Button>
         <Button
           type="submit"
-          shape="sharp"
           color="primary"
           onClick={() => {
             toast.info("🎉 Yayy!! Toast is displayed!");
@@ -128,7 +122,6 @@ function App() {
         </Button>
         <Button
           type="submit"
-          shape="sharp"
           color="primary"
           onClick={() => {
             toast.warn("🎉 Yayy!! Toast is displayed!");

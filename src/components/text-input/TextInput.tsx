@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./TextInput.scss";
+import styles from "./TextInput.module.css";
 
 const REGEX = {
   alphabets: /^[A-Za-z]+$/,
@@ -159,14 +159,15 @@ export default function TextInput({
 
   return (
     <div
-      className={`${className} rts-ui__text-input ${
-        error ? "text-input--error" : ""
+      className={`${className} ${styles[`rts-ui__text-input`]} ${
+        error ? styles["text-input--error"] : ""
       }`.trim()}>
       <input
         type={type}
         ref={inputRef}
-        className={`rts-ui__text-input__input 
-        ${!label ? "--nolabel" : ""}`}
+        className={
+          styles[`rts-ui__text-input__input`] + `${!label ? " --nolabel" : ""}`
+        }
         {...props}
         onFocus={handleOnFocus}
         onBlur={handleOnBlur}
@@ -178,9 +179,11 @@ export default function TextInput({
       />
       {!!label && (
         <label
-          className={`rts-ui__text-input__label 
-          ${focused ? "--onfocus" : ""}
-          ${error ? "--onerror" : ""}`}>
+          className={
+            styles[`rts-ui__text-input__label`] +
+            `${focused ? " --onfocus" : ""}
+          ${error ? " --onerror" : ""}`
+          }>
           {label}
         </label>
       )}

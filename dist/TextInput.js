@@ -22,8 +22,6 @@ var __rest = (this && this.__rest) || function (s, e) {
 
 import React, { useState, useEffect, useRef } from "react";
 
-import "./TextInput.scss";
-
 const REGEX = {
 
     alphabets: /^[A-Za-z]+$/,

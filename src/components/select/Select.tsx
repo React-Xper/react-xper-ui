@@ -5,7 +5,7 @@ import React, {
   useReducer,
   StyleHTMLAttributes,
 } from "react";
-import "./Select.scss";
+import styles from "./Select.module.css";
 import { Chevron } from "./SelectChevron";
 
 interface IAction {
@@ -109,7 +109,7 @@ export default function Select(props: ISelect) {
     <>
       {!!native ? (
         <select
-          className={`${className} rts-ui__select`.trim()}
+          className={`${className} ${styles["rts-ui__select"]}`.trim()}
           {...rest}
           style={style}>
           {children}
@@ -117,32 +117,34 @@ export default function Select(props: ISelect) {
       ) : (
         <>
           <div
-            className={`${className} rts-ui__select`.trim()}
+            className={`${className} ${styles["rts-ui__select"]}`.trim()}
             onClick={handleClickSelect}
             onBlur={handleClickSelect}
             style={style}>
-            <div className="rts-ui__select__visible">
+            <div className={styles["rts-ui__select__visible"]}>
               <label>{selected.title}</label>
-              <i className="rts-ui__select__arrow">
+              <i className={styles["rts-ui__select__arrow"]}>
                 <Chevron />
               </i>
             </div>
             <select
               ref={selectRef}
-              className="rts-ui__select--hidden"
+              className={styles["rts-ui__select--hidden"]}
               {...props}>
               {children}
             </select>
             {toggleShowOpts && (
-              <div className="rts-ui__select__option_panel">
+              <div className={styles["rts-ui__select__option_panel"]}>
                 <ul>
                   {!!options?.length &&
                     options?.map((option, index) => (
                       <li
                         className={
-                          option.value === selected.value
-                            ? "rts-ui__select__option--selected"
-                            : ""
+                          styles[
+                            option.value === selected.value
+                              ? "rts-ui__select__option--selected"
+                              : ""
+                          ]
                         }
                         key={index}
                         id={index.toString()}

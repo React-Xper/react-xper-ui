@@ -1,5 +1,5 @@
 import React from "react";
-import "./Toast.scss";
+import styles from "./Toast.module.css";
 import toastEvent from "./ToastEvent";
 import ToastClose from "./ToastClose";
 
@@ -68,14 +68,20 @@ export function ToastContainer({
     <div>
       {!!events?.length && (
         <div
-          className={`${className} rts-ui__toast toast--${position}`.trim()}
+          className={`${className} ${styles["rts-ui__toast"]} ${
+            styles[`toast--${position}`]
+          }`.trim()}
           {...props}>
           {events.map((evt) => {
             return (
-              <div className={`toast-component toast-component--${evt.type}`}>
+              <div
+                className={`${styles["toast-component"]} ${
+                  styles[`--${evt.type}`]
+                }`}>
                 <ToastClose
-                  className={`toast-close toast-close--${evt.type}`}
-                  style={{ height: "12px" }}
+                  className={`${styles["toast-close"]} ${
+                    styles[`--${evt.type}`]
+                  }`}
                   onClick={handleCloseToast(evt?.eventId)}
                 />
                 {evt.message}

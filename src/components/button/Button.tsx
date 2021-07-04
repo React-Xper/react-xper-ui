@@ -1,5 +1,5 @@
 import React from "react";
-import "./Button.scss";
+import styles from "./Button.module.css";
 
 /**
  * @name IButton
@@ -12,8 +12,6 @@ interface IButton
     React.HTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {
-  theme?: "dark" | "light";
-  shape?: "sharp" | "rounded";
   type?: "submit" | "button";
   className?: string;
 }
@@ -26,8 +24,6 @@ interface IButton
 export default function Button({
   children,
   color,
-  shape,
-  theme,
   type,
   className,
   ...props
@@ -35,10 +31,7 @@ export default function Button({
   return (
     <button
       type={type}
-      className={`${className} rts-ui__button rts-ui__button--${color}${
-        theme ? `--${theme}` : ""
-      } ${shape ? `rts-ui__button--${shape}`.trim() : ""}
-`}
+      className={`${className} ${styles?.["rts-ui__button"]}`}
       {...props}>
       {children}
     </button>

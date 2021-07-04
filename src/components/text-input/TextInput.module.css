@@ -1,0 +1,44 @@
+.text-input--error {
+  border-color: #e0304d;
+}
+
+.rts-ui__text-input__input {
+  padding: 15px 2px 8px 5px;
+  outline: none;
+  min-width: 330px;
+  font-size: 16px;
+  border: none;
+}
+
+.--nolabel {
+  padding: 8px 2px 8px 5px;
+}
+
+.rts-ui__text-input {
+  display: flex;
+  flex-direction: column;
+  font-family: inherit;
+  position: relative;
+  border: solid 1.8px #61dafb;
+}
+
+.rts-ui__text-input__label.--onfocus {
+  color: #3d8aa0;
+}
+
+.rts-ui__text-input__label.--onerror {
+  color: #e0304d;
+}
+
+.rts-ui__text-input__label {
+  font-size: 11px;
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

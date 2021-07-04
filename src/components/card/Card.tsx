@@ -1,5 +1,5 @@
 import React from "react";
-import "./Card.scss";
+import styles from "./Card.module.css";
 
 /**
  * @name  Card
@@ -15,7 +15,7 @@ export default function Card({
   HTMLDivElement
 >) {
   return (
-    <div className={`${className} rts-ui__card`.trim()} {...props}>
+    <div className={`${className} ${styles?.["rts-ui__card"]}`} {...props}>
       {children}
     </div>
   );

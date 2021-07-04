@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./TextInput.scss";
-
 interface ITextInput extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
 
     label?: string;

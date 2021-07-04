@@ -22,8 +22,6 @@ var __rest = (this && this.__rest) || function (s, e) {
 
 import React from "react";
 
-import "./Card.scss";
-
 export default function Card(_a) {
 
     var { children, className = "" } = _a, props = __rest(_a, ["children", "className"]);
