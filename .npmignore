@@ -1,0 +1,9 @@
+src/
+public/
+node_modules/
+*.log
+*/lock
+.gitignore
+bit
+.bitmap
+tsconfig.json

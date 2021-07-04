@@ -22,11 +22,13 @@ var __rest = (this && this.__rest) || function (s, e) {
 
 import React from "react";
 
+import styles from "./Card.module.css";
+
 export default function Card(_a) {
 
     var { children, className = "" } = _a, props = __rest(_a, ["children", "className"]);
 
-    return (React.createElement("div", Object.assign({ className: `${className} rts-ui__card`.trim() }, props), children));
+    return (React.createElement("div", Object.assign({ className: `${className} ${styles === null || styles === void 0 ? void 0 : styles["rts-ui__card"]}` }, props), children));
 
 }
 

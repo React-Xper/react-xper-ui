@@ -1,46 +1,67 @@
 {
-  "name": "react-xper-ui",
-  "version": "1.0.0",
-  "private": true,
-  "dependencies": {},
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "bit": {
-    "env": {
-      "compiler": "bit.envs/compilers/react-typescript@3.1.54"
-    },
-    "componentsDefaultDirectory": "components/{name}",
-    "packageManager": "yarn"
-  },
-  "devDependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
-    "@types/lodash": "^4.14.161",
-    "@types/react": "^16.9.42",
-    "@types/react-dom": "^16.9.8",
-    "typescript": "^3.9.6"
-  }
+	"name": "react-xper-ui",
+	"version": "1.0.2",
+	"description": "A React component library for passionate developers",
+	"private": false,
+	"main": "dist",
+	"dependencies": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/m3yevn/react-xper-ui.git"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"bit:build": "rimraf dist && bit build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"publish": "npm publish --access public"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"bit": {
+		"env": {
+			"compiler": "bit.envs/compilers/react-typescript@3.1.54"
+		},
+		"componentsDefaultDirectory": "components/{name}",
+		"packageManager": "yarn"
+	},
+	"devDependencies": {
+		"@testing-library/jest-dom": "^4.2.4",
+		"@testing-library/react": "^9.3.2",
+		"@testing-library/user-event": "^7.1.2",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"react-scripts": "3.4.1",
+		"@types/lodash": "^4.14.161",
+		"@types/react": "^16.9.42",
+		"@types/react-dom": "^16.9.8",
+		"typescript": "^3.9.6"
+	},
+	"author": "",
+	"funFacts": [
+		"⚡ Blazing fast component",
+		"⚙️ Simple and easy composition",
+		"📦 Tiny bundle size"
+	],
+	"badges": [],
+	"techStacks": [],
+	"screenshots": [],
+	"keywords": [
+		"React UI Components",
+		"React Xper"
+	]
 }

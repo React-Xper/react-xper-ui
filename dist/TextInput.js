@@ -22,6 +22,8 @@ var __rest = (this && this.__rest) || function (s, e) {
 
 import React, { useState, useEffect, useRef } from "react";
 
+import styles from "./TextInput.module.css";
+
 const REGEX = {
 
     alphabets: /^[A-Za-z]+$/,
@@ -232,17 +234,15 @@ export default function TextInput(_a) {
 
     };
 
-    return (React.createElement("div", { className: `${className} rts-ui__text-input ${error ? "text-input--error" : ""}`.trim() },
+    return (React.createElement("div", { className: `${className} ${styles[`rts-ui__text-input`]} ${error ? styles["text-input--error"] : ""}`.trim() },
 
-        React.createElement("input", Object.assign({ type: type, ref: inputRef, className: `rts-ui__text-input__input 
+        React.createElement("input", Object.assign({ type: type, ref: inputRef, className: styles[`rts-ui__text-input__input`] + `${!label ? " --nolabel" : ""}` }, props, { onFocus: handleOnFocus, onBlur: handleOnBlur, onChange: handleOnChange, onError: handleOnError, onKeyDown: handleOnKeyDown, onKeyUp: handleOnKeyUp, value: value })),
 
-        ${!label ? "--nolabel" : ""}` }, props, { onFocus: handleOnFocus, onBlur: handleOnBlur, onChange: handleOnChange, onError: handleOnError, onKeyDown: handleOnKeyDown, onKeyUp: handleOnKeyUp, value: value })),
+        !!label && (React.createElement("label", { className: styles[`rts-ui__text-input__label`] +
 
-        !!label && (React.createElement("label", { className: `rts-ui__text-input__label 
+                `${focused ? " --onfocus" : ""}
 
-          ${focused ? "--onfocus" : ""}
-
-          ${error ? "--onerror" : ""}` }, label))));
+          ${error ? " --onerror" : ""}` }, label))));
 
 }
 
