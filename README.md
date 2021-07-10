@@ -3,7 +3,7 @@
 **A React component library for passionate developers**
 
 <p>Version 1.0.2</p>
-<p>by </p>
+<p>by m3yevn</p>
 
 <hr/>
 
@@ -16,11 +16,15 @@
 
 ## ⭐ Public Url
 
-N.A
+https://www.npmjs.com/package/react-xper-ui
 
 ## 📚 Tech Stack
 
-N.A
+ - React
+ - CSS Modules
+ - NPM Package
+ - Bit.dev
+
 
 ## 📸 Screenshots
 
