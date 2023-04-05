@@ -41,7 +41,6 @@ const selectedReducer = (state = selectedState, action: IAction) => {
 /**
  * @name  Select
  * @description Select JSX element
- * @details https://bit.dev/m3yevn/reacthesis-ui/select
  */
 export default function Select(props: ISelect) {
   const {
@@ -109,7 +108,7 @@ export default function Select(props: ISelect) {
     <>
       {!!native ? (
         <select
-          className={`${className} ${styles["rts-ui__select"]}`.trim()}
+          className={`${className} ${styles["rxp-ui__select"]}`.trim()}
           {...rest}
           style={style}>
           {children}
@@ -117,24 +116,24 @@ export default function Select(props: ISelect) {
       ) : (
         <>
           <div
-            className={`${className} ${styles["rts-ui__select"]}`.trim()}
+            className={`${className} ${styles["rxp-ui__select"]}`.trim()}
             onClick={handleClickSelect}
             onBlur={handleClickSelect}
             style={style}>
-            <div className={styles["rts-ui__select__visible"]}>
+            <div className={styles["rxp-ui__select__visible"]}>
               <label>{selected.title}</label>
-              <i className={styles["rts-ui__select__arrow"]}>
+              <i className={styles["rxp-ui__select__arrow"]}>
                 <Chevron />
               </i>
             </div>
             <select
               ref={selectRef}
-              className={styles["rts-ui__select--hidden"]}
+              className={styles["rxp-ui__select--hidden"]}
               {...props}>
               {children}
             </select>
             {toggleShowOpts && (
-              <div className={styles["rts-ui__select__option_panel"]}>
+              <div className={styles["rxp-ui__select__option_panel"]}>
                 <ul>
                   {!!options?.length &&
                     options?.map((option, index) => (
@@ -142,7 +141,7 @@ export default function Select(props: ISelect) {
                         className={
                           styles[
                             option.value === selected.value
-                              ? "rts-ui__select__option--selected"
+                              ? "rxp-ui__select__option--selected"
                               : ""
                           ]
                         }

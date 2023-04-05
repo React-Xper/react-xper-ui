@@ -1,4 +1,4 @@
-.rts-ui__datepicker input[type="datetime-local"] {
+.rxp-ui__datepicker input[type="datetime-local"] {
   min-width: 330px;
   padding: 15px 2px 8px 5px;
   outline: none;
@@ -7,7 +7,7 @@
   border: solid 1.8px #61dafb;
 }
 
-.rts-ui__datepicker:before {
+.rxp-ui__datepicker:before {
   color: lightgrey;
   content: attr(placeholder) !important;
   margin-right: 0.5em;

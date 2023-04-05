@@ -1,9 +1,8 @@
-# React-xper-ui [DEPRECATED]
-## This project and library has been deprecated
+# React-xper-ui
 
 **A React component library for passionate developers**
 
-<p>Version 1.0.2</p>
+<p>Version 1.0.4</p>
 <p>by m3yevn</p>
 
 <hr/>
@@ -36,7 +35,7 @@ N.A
 ```sh
 start : $ react-scripts start
 build : $ react-scripts build
-bit:build : $ rimraf dist && bit build
+component:build : $ rimraf dist && tsc
 test : $ react-scripts test
 eject : $ react-scripts eject
 publish : $ npm publish --access public
@@ -64,13 +63,14 @@ This project does not have dependencies
  - @testing-library/jest-dom : $ ^4.2.4
  - @testing-library/react : $ ^9.3.2
  - @testing-library/user-event : $ ^7.1.2
- - react : $ ^16.13.1
- - react-dom : $ ^16.13.1
- - react-scripts : $ 3.4.1
  - @types/lodash : $ ^4.14.161
- - @types/react : $ ^16.9.42
- - @types/react-dom : $ ^16.9.8
- - typescript : $ ^3.9.6
+ - @types/react : $ ^16.14.34
+ - @types/react-dom : $ ^16.9.17
+ - react : $ ^17.0.2
+ - react-dom : $ ^17.0.2
+ - react-scripts : $ 3.4.1
+ - typescript : $ ^4.9.4
+ - typescript-plugin-css-modules : $ ^5.0.0
 
 
 <img src="https://cdn.dribbble.com/users/2401141/screenshots/5487982/developers-gif-showcase.gif"/>

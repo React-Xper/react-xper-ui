@@ -27,7 +27,6 @@ interface ITextInput
 /**
  * @name  TextInput
  * @description TextInput JSX element
- * @details https://bit.dev/m3yevn/reacthesis-ui/text-input
  */
 export default function TextInput({
   label = "",
@@ -159,14 +158,14 @@ export default function TextInput({
 
   return (
     <div
-      className={`${className} ${styles[`rts-ui__text-input`]} ${
+      className={`${className} ${styles[`rxp-ui__text-input`]} ${
         error ? styles["text-input--error"] : ""
       }`.trim()}>
       <input
         type={type}
         ref={inputRef}
         className={
-          styles[`rts-ui__text-input__input`] + `${!label ? " --nolabel" : ""}`
+          styles[`rxp-ui__text-input__input`] + `${!label ? " --nolabel" : ""}`
         }
         {...props}
         onFocus={handleOnFocus}
@@ -180,7 +179,7 @@ export default function TextInput({
       {!!label && (
         <label
           className={
-            styles[`rts-ui__text-input__label`] +
+            styles[`rxp-ui__text-input__label`] +
             `${focused ? " --onfocus" : ""}
           ${error ? " --onerror" : ""}`
           }>

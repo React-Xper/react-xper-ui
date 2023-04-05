@@ -1,30 +1,30 @@
-select.rts-ui__select {
+select.rxp-ui__select {
   padding: 8px;
 }
 
-select.rts-ui__select:focus {
+select.rxp-ui__select:focus {
   border: solid 1.5px #61dafb;
 }
 
-.rts-ui__select:hover {
+.rxp-ui__select:hover {
   cursor: pointer;
 }
 
-.rts-ui__select select {
+.rxp-ui__select select {
   display: none;
 }
 
-.rts-ui__select label {
+.rxp-ui__select label {
   padding-left: 4px;
 }
 
-.rts-ui__select__arrow {
+.rxp-ui__select__arrow {
   right: 8px;
   top: 6px;
   position: absolute;
 }
 
-.rts-ui__select {
+.rxp-ui__select {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,7 +41,7 @@ select.rts-ui__select:focus {
   border-radius: 4px;
 }
 
-.rts-ui__select__option_panel {
+.rxp-ui__select__option_panel {
   position: absolute;
   top: 100%;
   left: 0px;
@@ -55,20 +55,20 @@ select.rts-ui__select:focus {
   width: inherit;
 }
 
-.rts-ui__select__option_panel ul {
+.rxp-ui__select__option_panel ul {
   margin: 0px;
   padding: 0px;
 }
 
-.rts-ui__select__option_panel ul li {
+.rxp-ui__select__option_panel ul li {
   list-style: none;
   padding: 6px;
 }
 
-.rts-ui__select__option--selected {
+.rxp-ui__select__option--selected {
   background-color: whitesmoke;
 }
 
-.rts-ui__select__option_panel ul li:hover {
+.rxp-ui__select__option_panel ul li:hover {
   background-color: whitesmoke;
 }

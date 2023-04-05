@@ -2,7 +2,7 @@
   border-color: #e0304d;
 }
 
-.rts-ui__text-input__input {
+.rxp-ui__text-input__input {
   padding: 15px 2px 8px 5px;
   outline: none;
   min-width: 330px;
@@ -14,7 +14,7 @@
   padding: 8px 2px 8px 5px;
 }
 
-.rts-ui__text-input {
+.rxp-ui__text-input {
   display: flex;
   flex-direction: column;
   font-family: inherit;
@@ -22,15 +22,15 @@
   border: solid 1.8px #61dafb;
 }
 
-.rts-ui__text-input__label.--onfocus {
+.rxp-ui__text-input__label.--onfocus {
   color: #3d8aa0;
 }
 
-.rts-ui__text-input__label.--onerror {
+.rxp-ui__text-input__label.--onerror {
   color: #e0304d;
 }
 
-.rts-ui__text-input__label {
+.rxp-ui__text-input__label {
   font-size: 11px;
   position: absolute;
   left: 5px;

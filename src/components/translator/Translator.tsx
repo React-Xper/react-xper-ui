@@ -16,7 +16,6 @@ const { Provider, Consumer } = TranslateContext;
  * @name  TranslateProvider
  * @description Context provider to use translatable texts
  * @usedBy Translatable
- * @details https://bit.dev/m3yevn/reacthesis-ui/translator
  */
 export const TranslateProvider: React.FunctionComponent<ITranslateProvider> = ({
   src,
@@ -29,7 +28,6 @@ export const TranslateProvider: React.FunctionComponent<ITranslateProvider> = ({
  * @name  Translatable
  * @description Context consumer to use translatable texts
  * @reliesOn TranslateProvider
- * @details https://bit.dev/m3yevn/reacthesis-ui/translator
  */
 export const Translatable: React.FunctionComponent<ITranslatable> = ({
   text,

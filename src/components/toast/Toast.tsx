@@ -23,7 +23,6 @@ interface IToast
 /**
  * @name  Toast
  * @description Toast JSX element
- * @details https://bit.dev/m3yevn/reacthesis-ui/toast
  */
 export function ToastContainer({
   position = "top-right",
@@ -68,7 +67,7 @@ export function ToastContainer({
     <div>
       {!!events?.length && (
         <div
-          className={`${className} ${styles["rts-ui__toast"]} ${
+          className={`${className} ${styles["rxp-ui__toast"]} ${
             styles[`toast--${position}`]
           }`.trim()}
           {...props}>

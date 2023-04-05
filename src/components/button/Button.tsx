@@ -19,7 +19,6 @@ interface IButton
 /**
  * @name  Button
  * @description Button JSX element
- * @details https://bit.dev/m3yevn/reacthesis-ui/button
  */
 export default function Button({
   children,
@@ -31,7 +30,7 @@ export default function Button({
   return (
     <button
       type={type}
-      className={`${className} ${styles?.["rts-ui__button"]}`}
+      className={`${className} ${styles?.["rxp-ui__button"]}`}
       {...props}>
       {children}
     </button>

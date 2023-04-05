@@ -4,7 +4,6 @@ import styles from "./Card.module.css";
 /**
  * @name  Card
  * @description Card JSX element
- * @details https://bit.dev/m3yevn/reacthesis-ui/card
  */
 export default function Card({
   children,
@@ -15,7 +14,7 @@ export default function Card({
   HTMLDivElement
 >) {
   return (
-    <div className={`${className} ${styles?.["rts-ui__card"]}`} {...props}>
+    <div className={`${className} ${styles?.["rxp-ui__card"]}`} {...props}>
       {children}
     </div>
   );

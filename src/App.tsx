@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import Select from "./components/select";
 import TextInput from "./components/text-input";
 import Button from "./components/button";
+import Carousel from "./components/carousel";
 import { TranslateProvider, Translatable } from "./components/translator";
 
 import en from "./assets/localization/en.json";
 import zh_cn from "./assets/localization/zh-cn.json";
 import DatePicker from "./components/date-picker";
 import toast, { ToastContainer } from "./components/toast";
+import Slide from "./components/carousel/Slide";
 
 function App() {
   const [text, setText] = useState("");
@@ -78,7 +80,8 @@ function App() {
         style={{ maxWidth: "340px" }}
         onSubmit={(e) => {
           e.preventDefault();
-        }}>
+        }}
+      >
         <DatePicker native />
         <br />
         <br />
@@ -93,7 +96,8 @@ function App() {
           color="primary"
           onClick={() => {
             toast.error("🎉 Yayy!! Toast is displayed!");
-          }}>
+          }}
+        >
           Show toast error
         </Button>
         <Button
@@ -101,7 +105,8 @@ function App() {
           color="primary"
           onClick={() => {
             toast("🎉 Yayy!! Toast is displayed!");
-          }}>
+          }}
+        >
           Show toast normal
         </Button>
         <Button
@@ -109,7 +114,8 @@ function App() {
           color="primary"
           onClick={() => {
             toast.success("🎉 Yayy!! Toast is displayed!");
-          }}>
+          }}
+        >
           Show toast success
         </Button>
         <Button
@@ -117,7 +123,8 @@ function App() {
           color="primary"
           onClick={() => {
             toast.info("🎉 Yayy!! Toast is displayed!");
-          }}>
+          }}
+        >
           Show toast info
         </Button>
         <Button
@@ -125,10 +132,34 @@ function App() {
           color="primary"
           onClick={() => {
             toast.warn("🎉 Yayy!! Toast is displayed!");
-          }}>
+          }}
+        >
           Show toast warn
         </Button>
       </form>
+      <Carousel
+        style={{ marginTop: "32px" }}
+        slides={[
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            Hi
+          </div>,
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            Hi Hi
+          </div>,
+        ]}
+      />
     </div>
   );
 }

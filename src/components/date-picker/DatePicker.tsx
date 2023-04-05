@@ -36,7 +36,6 @@ const getMaxDate = (years: number) => {
 /**
  * @name  DatePicker
  * @description DatePicker JSX element
- * @details https://bit.dev/m3yevn/reacthesis-ui/date-picker
  */
 export default function DatePicker({
   native,
@@ -49,7 +48,7 @@ export default function DatePicker({
   ...props
 }: IDatePicker) {
   return (
-    <div className={`${className} ${styles["rts-ui__datepicker"]}`} {...props}>
+    <div className={`${className} ${styles["rxp-ui__datepicker"]}`} {...props}>
       {!native && <div></div>}
       {!!native && (
         <input

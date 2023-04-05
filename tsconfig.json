@@ -1,11 +1,17 @@
 {
   "compilerOptions": {
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ],
     "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
+    "declaration": true,
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -16,10 +22,12 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react"
+    "emitDeclarationOnly": false,
+    "jsx": "react",
+    "outDir": "dist",
+    "noEmit": true
   },
   "include": [
-    "src"
+    "src/components/**/*"
   ]
 }
