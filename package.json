@@ -4,7 +4,6 @@
   "description": "A React component library for passionate developers",
   "private": false,
   "main": "dist",
-  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/m3yevn/react-xper-ui.git"
@@ -34,9 +33,6 @@
     ]
   },
   "bit": {
-    "env": {
-      "compiler": "bit.envs/compilers/react-typescript@3.1.54"
-    },
     "componentsDefaultDirectory": "components/{name}",
     "packageManager": "yarn"
   },
@@ -44,13 +40,13 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
     "@types/lodash": "^4.14.161",
-    "@types/react": "^16.9.42",
-    "@types/react-dom": "^16.9.8",
-    "typescript": "^3.9.6"
+    "@types/react": "^16.14.34",
+    "@types/react-dom": "^16.9.17",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "3.4.1",
+    "typescript": "^4.9.4"
   },
   "author": "m3yevn",
   "funFacts": [

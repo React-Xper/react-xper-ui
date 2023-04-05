@@ -1,4 +1,5 @@
-# React-xper-ui
+# React-xper-ui [DEPRECATED]
+## This project and library has been deprecated
 
 **A React component library for passionate developers**
 
