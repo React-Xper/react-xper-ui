@@ -2,7 +2,7 @@
 
 **A React component library for passionate developers**
 
-<p>Version 1.0.4</p>
+<p>Version 1.1.0</p>
 <p>by m3yevn</p>
 
 <hr/>
@@ -28,14 +28,14 @@ https://www.npmjs.com/package/react-xper-ui
 
 ## 📸 Screenshots
 
-N.A
+
 
 ## 📜 Scripts
 
 ```sh
 start : $ react-scripts start
 build : $ react-scripts build
-component:build : $ rimraf dist && tsc
+component:build : $ rimraf dist && mkdir dist && tsc && node scripts/import-css-modules.js
 test : $ react-scripts test
 eject : $ react-scripts eject
 publish : $ npm publish --access public
