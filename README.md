@@ -2,7 +2,7 @@
 
 **A React component library for passionate developers**
 
-<p>Version 1.1.0</p>
+<p>Version 1.1.3</p>
 <p>by m3yevn</p>
 
 <hr/>
@@ -68,7 +68,7 @@ This project does not have dependencies
  - @types/react-dom : $ ^16.9.17
  - react : $ ^17.0.2
  - react-dom : $ ^17.0.2
- - react-scripts : $ 3.4.1
+ - react-scripts : $ 5.0.1
  - typescript : $ ^4.9.4
  - typescript-plugin-css-modules : $ ^5.0.0
 

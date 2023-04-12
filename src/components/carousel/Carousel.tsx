@@ -44,7 +44,9 @@ export default function Carousel({
         onClick={handlePreviousSlide}
       ></button>
       {slides.map((slide, index) => (
-        <Slide active={index === currentSlide}>{slide}</Slide>
+        <Slide key={index} active={index === currentSlide}>
+          {slide}
+        </Slide>
       ))}
       <button
         className={styles["rxp-ui__carousel-arrow-right"]}

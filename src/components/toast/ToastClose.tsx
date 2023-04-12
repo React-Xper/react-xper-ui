@@ -1,6 +1,6 @@
 import React from "react";
 
-export default ({ style, className, ...props }: any) => {
+const ToastCloase = ({ style, className, ...props }: any) => {
   return (
     <>
       <svg
@@ -12,7 +12,8 @@ export default ({ style, className, ...props }: any) => {
         y="0px"
         viewBox="0 0 47.971 47.971"
         {...style}
-        {...props}>
+        {...props}
+      >
         <g>
           <path
             d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88
@@ -40,3 +41,5 @@ export default ({ style, className, ...props }: any) => {
     </>
   );
 };
+
+export default ToastCloase;

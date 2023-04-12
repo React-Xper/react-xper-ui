@@ -9,7 +9,7 @@ import en from "./assets/localization/en.json";
 import zh_cn from "./assets/localization/zh-cn.json";
 import DatePicker from "./components/date-picker";
 import toast, { ToastContainer } from "./components/toast";
-import Slide from "./components/carousel/Slide";
+import Accordion from "./components/accordion";
 
 function App() {
   const [text, setText] = useState("");
@@ -137,6 +137,8 @@ function App() {
           Show toast warn
         </Button>
       </form>
+      <br />
+      <hr />
       <Carousel
         style={{ marginTop: "32px" }}
         slides={[
@@ -160,6 +162,22 @@ function App() {
           </div>,
         ]}
       />
+      <br />
+      <hr />
+      <Accordion title="Click to expand">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          tincidunt enim eu libero pharetra, volutpat efficitur odio molestie.
+          Suspendisse in elit ut nulla vulputate pharetra in quis nisl. Integer
+          et elementum eros. Duis nulla est, venenatis nec lacus quis, ultrices
+          commodo nulla. Aenean posuere neque in lectus laoreet, quis mollis
+          nulla dictum. Integer sagittis auctor quam sed ullamcorper. Phasellus
+          id faucibus metus, sed finibus purus. Nullam efficitur nulla quis
+          magna condimentum posuere. In tristique nibh a condimentum varius.
+          Nunc at imperdiet urna. Quisque vitae sapien commodo, laoreet mauris
+          sed, tincidunt purus.
+        </p>
+      </Accordion>
     </div>
   );
 }
