@@ -11,6 +11,7 @@ interface IDatePicker
   minDate?: string;
   maxDate?: string;
   type?: string;
+  placeholder?: string;
 }
 
 /**

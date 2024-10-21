@@ -139,24 +139,30 @@ function App() {
       </form>
       <Carousel
         style={{ marginTop: "32px" }}
+        arrowColor="white"
         slides={[
           <div
             style={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              background: "violet",
+              height: "200px",
             }}
           >
-            Hi
+            Page 1
           </div>,
           <div
             style={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              background: "maroon",
+              height: "200px",
+              color: "white",
             }}
           >
-            Hi Hi
+            Page 2
           </div>,
         ]}
       />

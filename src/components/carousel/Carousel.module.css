@@ -1,3 +1,7 @@
+:root {
+    --arrow-color: #61dafb;
+}
+
 .rxp-ui__carousel {
     position: relative;
     width: 100%;
@@ -45,11 +49,11 @@
 
 
 .rxp-ui__carousel-arrow-left:before {
-    border-right: 16px solid #61dafb;
+    border-right: 16px solid var(--arrow-color);
 }
 
 .rxp-ui__carousel-arrow-right:before {
-    border-left: 16px solid #61dafb;
+    border-left: 16px solid var(--arrow-color);
 }
 
 .rxp-ui__slide {

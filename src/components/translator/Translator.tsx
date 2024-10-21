@@ -7,6 +7,7 @@ interface ITranslatable {
 
 interface ITranslateProvider {
   src: any;
+  children: any;
 }
 
 const TranslateContext = createContext({});

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Carousel.module.css";
 import Slide from "./Slide";
 
@@ -15,6 +15,7 @@ interface ICarousel
   > {
   className?: string;
   slides: JSX.Element[];
+  arrowColor?: string;
 }
 
 /**
@@ -25,6 +26,7 @@ export default function Carousel({
   children,
   className = "",
   slides,
+  arrowColor,
   ...props
 }: ICarousel) {
   const [currentSlide, setCurrentSlide] = React.useState(0);
@@ -37,11 +39,19 @@ export default function Carousel({
       currentSlide === slides.length - 1 ? currentSlide : currentSlide + 1
     );
 
+    useEffect(() => {
+      if (arrowColor) {
+        const root = document.querySelector(":root") as HTMLElement;
+        root.style.setProperty("--arrow-color", arrowColor);
+      }
+    },[arrowColor])
+
   return (
     <div className={`${className} ${styles["rxp-ui__carousel"]}`} {...props}>
       <button
         className={styles["rxp-ui__carousel-arrow-left"]}
         onClick={handlePreviousSlide}
+        style={{ borderColor: arrowColor }}
       ></button>
       {slides.map((slide, index) => (
         <Slide active={index === currentSlide}>{slide}</Slide>
@@ -49,6 +59,7 @@ export default function Carousel({
       <button
         className={styles["rxp-ui__carousel-arrow-right"]}
         onClick={handleNextSlide}
+        style={{ borderColor: arrowColor }}
       ></button>
     </div>
   );
