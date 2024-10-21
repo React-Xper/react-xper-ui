@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Toast.module.css";
 import toastEvent from "./ToastEvent";
 import ToastClose from "./ToastClose";
@@ -18,6 +18,47 @@ interface IToast
     | "bottom-center";
   autoClear?: boolean;
   autoClearDuration?: number;
+}
+
+interface ToastEvent {
+  eventId: string;
+  type: string;
+  message: string;
+}
+
+interface IToastProps {
+  evt: ToastEvent;
+  handleCloseToast: Function;
+  autoClear?: Boolean;
+  autoClearDuration?: number;
+}
+
+function ToastItem({
+  evt,
+  handleCloseToast,
+  autoClear,
+  autoClearDuration,
+}: IToastProps) {
+  useEffect(() => {
+    if (autoClear && autoClearDuration) {
+      setTimeout(() => {
+        handleCloseToast(evt?.eventId).call();
+      }, autoClearDuration || 0);
+    }
+  }, [autoClear, autoClearDuration]);
+
+  return (
+    <div
+      key={evt?.eventId}
+      className={`${styles["toast-component"]} ${styles[`--${evt.type}`]}`}
+    >
+      <ToastClose
+        className={`${styles["toast-close"]} ${styles[`--${evt.type}`]}`}
+        onClick={handleCloseToast(evt?.eventId)}
+      />
+      {evt.message}
+    </div>
+  );
 }
 
 /**
@@ -70,21 +111,17 @@ export function ToastContainer({
           className={`${className} ${styles["rxp-ui__toast"]} ${
             styles[`toast--${position}`]
           }`.trim()}
-          {...props}>
+          {...props}
+        >
           {events.map((evt) => {
             return (
-              <div
-                className={`${styles["toast-component"]} ${
-                  styles[`--${evt.type}`]
-                }`}>
-                <ToastClose
-                  className={`${styles["toast-close"]} ${
-                    styles[`--${evt.type}`]
-                  }`}
-                  onClick={handleCloseToast(evt?.eventId)}
-                />
-                {evt.message}
-              </div>
+              <ToastItem
+                key={evt?.eventId}
+                evt={evt}
+                handleCloseToast={handleCloseToast}
+                autoClear={autoClear}
+                autoClearDuration={autoClearDuration}
+              />
             );
           })}
         </div>

@@ -9,7 +9,6 @@ import en from "./assets/localization/en.json";
 import zh_cn from "./assets/localization/zh-cn.json";
 import DatePicker from "./components/date-picker";
 import toast, { ToastContainer } from "./components/toast";
-import Slide from "./components/carousel/Slide";
 
 function App() {
   const [text, setText] = useState("");
@@ -90,7 +89,7 @@ function App() {
         </Button>
         <br />
         <br />
-        <ToastContainer />
+        <ToastContainer autoClear={true} autoClearDuration={3000} />
         <Button
           type="submit"
           color="primary"

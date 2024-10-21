@@ -39,12 +39,12 @@ export default function Carousel({
       currentSlide === slides.length - 1 ? currentSlide : currentSlide + 1
     );
 
-    useEffect(() => {
-      if (arrowColor) {
-        const root = document.querySelector(":root") as HTMLElement;
-        root.style.setProperty("--arrow-color", arrowColor);
-      }
-    },[arrowColor])
+  useEffect(() => {
+    if (arrowColor) {
+      const root = document.querySelector(":root") as HTMLElement;
+      root.style.setProperty("--arrow-color", arrowColor);
+    }
+  }, [arrowColor]);
 
   return (
     <div className={`${className} ${styles["rxp-ui__carousel"]}`} {...props}>
@@ -54,7 +54,9 @@ export default function Carousel({
         style={{ borderColor: arrowColor }}
       ></button>
       {slides.map((slide, index) => (
-        <Slide active={index === currentSlide}>{slide}</Slide>
+        <Slide key={index} active={index === currentSlide}>
+          {slide}
+        </Slide>
       ))}
       <button
         className={styles["rxp-ui__carousel-arrow-right"]}
