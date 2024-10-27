@@ -1,6 +1,6 @@
 {
 	"name": "react-xper-ui",
-	"version": "1.0.4",
+	"version": "1.1.3",
 	"description": "A React component library for passionate developers",
 	"private": false,
 	"main": "dist",
@@ -12,7 +12,7 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
-		"component:build": "rimraf dist && tsc",
+		"component:build": "rimraf dist && mkdir dist && tsc && node scripts/import-css-modules.js",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"publish": "npm publish --access public",

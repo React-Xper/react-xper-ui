@@ -1,0 +1,56 @@
+.rxp-ui__accordion {
+  border: solid 1px lightgray;
+}
+
+.rxp-ui__accordion-title {
+  display: flex;
+  padding: 16px;
+  border-bottom: solid 1px lightgray;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+.rxp-ui__accordion-title-expanded {
+  background-color: whitesmoke;
+}
+
+.rxp-ui__accordion-arrow-top,
+.rxp-ui__accordion-arrow-down {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  height: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  opacity: 0.7;
+  transition: all 0.25s ease-in;
+}
+
+.rxp-ui__accordion-arrow-top:before,
+.rxp-ui__accordion-arrow-down:before {
+  margin: 0 5px;
+  display: inline-block;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  content: "";
+  border-bottom: 16px solid #61dafb;
+}
+
+.rxp-ui__accordion-arrow-down {
+  transform: rotateX(180deg);
+}
+
+.rxp-ui__accordion-content {
+  padding: 0px 16px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.1s ease-in-out;
+}
+
+.rxp-ui__accordion-content-expanded {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  max-height: unset;
+}

@@ -25,7 +25,6 @@
     "emitDeclarationOnly": false,
     "jsx": "react",
     "outDir": "dist",
-    "noEmit": true
   },
   "include": [
     "src/components/**/*"
