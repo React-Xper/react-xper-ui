@@ -9,10 +9,13 @@ import en from "./assets/localization/en.json";
 import zh_cn from "./assets/localization/zh-cn.json";
 import DatePicker from "./components/date-picker";
 import toast, { ToastContainer } from "./components/toast";
+import ThirdPartyLogin from "./components/third-party/login";
 
 function App() {
   const [text, setText] = useState("");
   const [error, setError] = useState("");
+  const [googleAuthState, setGoogleAuthState] = useState(null);
+  const [facebookAuthState, setFacebookAuthState] = useState(null);
 
   const languageSet = {
     English: en,
@@ -165,6 +168,23 @@ function App() {
           </div>,
         ]}
       />
+      Google: {googleAuthState && JSON.stringify(googleAuthState)}
+      <br />
+      Facebook: {facebookAuthState && JSON.stringify(facebookAuthState)}
+      <div
+        style={{
+          marginTop: "32px",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <ThirdPartyLogin
+          googleClientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
+          facebookAppId={process.env.REACT_APP_FACEBOOK_APP_ID}
+          onGoogleAuth={setGoogleAuthState}
+          onFacebookAuth={setFacebookAuthState}
+        />
+      </div>
     </div>
   );
 }

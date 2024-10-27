@@ -45,7 +45,7 @@ function ToastItem({
         handleCloseToast(evt?.eventId).call();
       }, autoClearDuration || 0);
     }
-  }, [autoClear, autoClearDuration]);
+  }, [autoClear, evt?.eventId, autoClearDuration, handleCloseToast]);
 
   return (
     <div

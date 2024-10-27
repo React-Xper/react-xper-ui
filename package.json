@@ -64,5 +64,8 @@
 	"keywords": [
 		"React UI Components",
 		"React Xper"
-	]
+	],
+	"dependencies": {
+		"jwt-decode": "^4.0.0"
+	}
 }

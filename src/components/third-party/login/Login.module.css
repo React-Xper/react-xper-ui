@@ -1,0 +1,46 @@
+.rxp-ui__third-party_login {
+  padding: 12px;
+  width: 300px;
+  min-height: 200px;
+}
+
+.rxp-ui__third-party_login.rxp-ui__third-party_dark button {
+  background-color: rgb(46, 46, 46);
+  color: whitesmoke;
+}
+
+.rxp-ui__third-party_login button {
+  min-width: 256px;
+  width: 100%;
+  min-height: 40px;
+  padding: 12px;
+  border: none;
+  margin-top: 4px;
+  margin-bottom: 4px;
+
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+
+  background-color: white;
+  box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: center;
+}
+
+.rxp-ui__third-party_login button:active {
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2);
+  background-color: whitesmoke;
+  border-color: lightgray;
+}
+
+.rxp-ui__third-party_login button svg {
+  position: absolute;
+  left: 5%;
+  bottom: 20%;
+}
+
+.rxp-ui__third-party_login button span {
+  text-align: start;
+}
