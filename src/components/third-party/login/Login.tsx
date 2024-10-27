@@ -31,7 +31,7 @@ export default function ThirdPartyLogin({
   children,
   color,
   className = "",
-  thirdParties = ["google", "facebook", "github"], // gitlab, bitbucket, slack, apple, microsoft
+  thirdParties = ["google", "github"], // gitlab, bitbucket, slack, apple, microsoft
   googleClientId = "",
   facebookAppId = "",
   onGoogleAuth = () => {},
