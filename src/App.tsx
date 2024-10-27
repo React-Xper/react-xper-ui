@@ -9,11 +9,8 @@ import en from "./assets/localization/en.json";
 import zh_cn from "./assets/localization/zh-cn.json";
 import DatePicker from "./components/date-picker";
 import toast, { ToastContainer } from "./components/toast";
-<<<<<<< HEAD
 import ThirdPartyLogin from "./components/third-party/login";
-=======
 import Accordion from "./components/accordion";
->>>>>>> a3e77bf8424279e9f8fbc793db045b6b90aeedac
 
 function App() {
   const [text, setText] = useState("");
