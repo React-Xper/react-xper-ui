@@ -184,6 +184,7 @@ function App() {
         <ThirdPartyLogin
           googleClientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
           facebookAppId={process.env.REACT_APP_FACEBOOK_APP_ID}
+          thirdParties={["google", "facebook", "github"]}
           onGoogleAuth={setGoogleAuthState}
           onFacebookAuth={setFacebookAuthState}
         />
