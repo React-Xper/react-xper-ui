@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build:vercel",
+  "outputDirectory": "build",
+  "routes": [
+    { "src": "/docs", "dest": "/docs.html" },
+    { "src": "/demo", "dest": "/demo/index.html" },
+    { "src": "/demo/(.*)", "dest": "/demo/$1" },
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}

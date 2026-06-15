@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://react-xper-ui.vercel.app/sitemap.xml
