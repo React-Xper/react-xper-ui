@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Docs — React Xper UI</title>
+    <title>Docs — Meridian UI</title>
+    <meta name="description" content="Meridian UI documentation — install, components, and publish guide." />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
@@ -11,16 +12,24 @@
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a href="/" class="logo">React <strong>Xper UI</strong></a>
+        <a href="/" class="logo">
+          <span class="logo-parent">Meridian</span>
+          <span class="logo-product">UI</span>
+        </a>
         <nav class="nav">
+          <a href="/" class="nav-product nav-product--active">UI</a>
+          <span class="nav-divider">·</span>
+          <a href="https://react-xper.vercel.app" class="nav-product">Studio</a>
+          <span class="nav-divider">|</span>
           <a href="/demo">Demo</a>
           <a href="/docs">Docs</a>
         </nav>
       </div>
     </header>
     <main class="docs-main container">
+      <p class="ecosystem-badge">Meridian platform · UI</p>
       <h1>Documentation</h1>
-      <p>Install and import components from the published npm package.</p>
+      <p>Install and import from the published npm package (<code>react-xper-ui</code>).</p>
 
       <h2>Install</h2>
       <pre>npm i react-xper-ui</pre>
@@ -35,24 +44,25 @@ export function App() {
 
       <h2>Components</h2>
       <ul>
-        <li><code>Button</code> — colors: primary, black, etc.</li>
-        <li><code>Select</code> — custom or <code>native</code> mode</li>
+        <li><code>Button</code> — primary, black, and custom colors</li>
+        <li><code>Select</code> — custom or <code>native</code></li>
         <li><code>TextInput</code> — prefix, validation, numberOnly</li>
-        <li><code>Card</code></li>
-        <li><code>Carousel</code> + <code>Slide</code></li>
-        <li><code>DatePicker</code></li>
+        <li><code>Card</code> · <code>Carousel</code> · <code>DatePicker</code></li>
         <li><code>Toast</code> + <code>ToastContainer</code></li>
         <li><code>Accordion</code></li>
         <li><code>TranslateProvider</code> + <code>Translatable</code></li>
         <li><code>ThirdPartyLogin</code> — Google, Facebook, GitHub</li>
       </ul>
 
-      <h2>Build library</h2>
+      <h2>Meridian Studio</h2>
+      <p>Patterns and canvas tools: <a href="https://react-xper.vercel.app">react-xper.vercel.app</a></p>
+
+      <h2>Publish</h2>
       <pre>npm run component:build
 npm publish</pre>
-
-      <h2>Demo</h2>
-      <p>Interactive showcase: <a href="/demo">/demo</a></p>
     </main>
+    <footer class="site-footer">
+      <a href="https://react-xper.vercel.app">Studio</a> · <a href="https://github.com/React-Xper">GitHub</a>
+    </footer>
   </body>
 </html>

@@ -1,7 +1,7 @@
 {
 	"name": "react-xper-ui",
-	"version": "1.2.0",
-	"description": "A React component library for passionate developers",
+	"version": "1.4.0",
+	"description": "Meridian UI — production React components for the Meridian platform (CSS Modules, TypeScript-friendly).",
 	"private": false,
 	"homepage": "https://react-xper-ui.vercel.app/demo",
 	"main": "dist",
@@ -65,8 +65,10 @@
 	],
 	"screenshots": [],
 	"keywords": [
-		"React UI Components",
-		"React Xper"
+		"meridian",
+		"meridian-ui",
+		"react-xper-ui",
+		"React UI Components"
 	],
 	"dependencies": {
 		"jwt-decode": "^4.0.0"

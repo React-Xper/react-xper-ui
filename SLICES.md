@@ -1,16 +1,17 @@
-# React Xper UI — Vertical Slices
+# Meridian UI — Vertical Slices
 
 | Slice | Status |
 |-------|--------|
-| Component library (`component:build`) | ✅ |
-| Marketing landing (`site/`) | ✅ |
+| **Meridian** platform rebrand (from Xper) | ✅ |
+| Marketing landing (`site/`) — UI + Studio | ✅ |
 | `/docs` static reference | ✅ |
 | `/demo` CRA showcase | ✅ |
 | CI + npm release workflow | ✅ |
 | Vercel deploy | ⏳ after push |
-| Storybook (optional) | 🔜 |
+| npm package rename (`@meridian/ui`) | 🔜 |
 
-## CD
+## Brand
 
-- `npm run build:vercel` — demo at `/demo`, marketing at `/`
-- Tag `v*` → npm publish (needs `NPM_TOKEN`)
+- **Platform:** Meridian — precision React interfaces
+- **This repo:** Meridian UI — npm `react-xper-ui`
+- **Sibling:** [Meridian Studio](https://react-xper.vercel.app)

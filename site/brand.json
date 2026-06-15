@@ -1,0 +1,25 @@
+{
+  "ecosystem": {
+    "name": "Meridian",
+    "tagline": "Precision React interfaces — components, patterns, and canvas.",
+    "orgUrl": "https://github.com/React-Xper",
+    "accent": "#818cf8",
+    "accentBright": "#a5b4fc"
+  },
+  "products": {
+    "ui": {
+      "name": "Meridian UI",
+      "shortName": "UI",
+      "siteUrl": "https://react-xper-ui.vercel.app",
+      "npmUrl": "https://www.npmjs.com/package/react-xper-ui",
+      "githubUrl": "https://github.com/React-Xper/react-xper-ui",
+      "install": "npm i react-xper-ui"
+    },
+    "studio": {
+      "name": "Meridian Studio",
+      "shortName": "Studio",
+      "siteUrl": "https://react-xper.vercel.app",
+      "githubUrl": "https://github.com/React-Xper/react-xper"
+    }
+  }
+}

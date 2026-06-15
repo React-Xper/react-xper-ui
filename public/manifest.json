@@ -1,15 +1,10 @@
 {
-  "short_name": "React Xper UI",
-  "name": "React Xper UI — component demo",
-  "icons": [
-    {
-      "src": "favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
-    }
-  ],
+  "short_name": "Meridian UI",
+  "name": "Meridian UI",
+  "description": "Production React components — part of the Meridian platform.",
+  "icons": [{ "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#0a0a0a",
-  "background_color": "#0a0a0a"
+  "theme_color": "#09090b",
+  "background_color": "#09090b"
 }
