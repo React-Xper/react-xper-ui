@@ -1,5 +1,7 @@
 # Uilerial
 
+> **Renamed from `react-xper-ui`.** Use this folder only — delete any leftover `react-xper-ui/` or `meridian-studio/` shells (orphan `node_modules` from the move).
+
 **Uilerial** — production React components for the [Techlestial](https://techlestial.vercel.app) studio.
 
 | Product | URL |
