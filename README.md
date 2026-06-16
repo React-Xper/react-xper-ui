@@ -1,11 +1,11 @@
 # Uilerial
 
-**Uilerial** — production React components for the [Meridian](https://uilerial.vercel.app) platform.
+**Uilerial** — production React components for the [Techlestial](https://techlestial.vercel.app) studio.
 
 | Product | URL |
 |---------|-----|
-| **UI** (this repo) | [@techlestial/uilerial.vercel.app](https://uilerial.vercel.app) |
-| **Studio** | [react-xper.vercel.app](https://uilerial-studio.vercel.app) |
+| **UI** (this repo) | [uilerial.vercel.app](https://uilerial.vercel.app) |
+| **Studio** | [uilerial-studio.vercel.app](https://uilerial-studio.vercel.app) |
 
 ## Install
 
@@ -13,14 +13,13 @@
 npm i @techlestial/uilerial
 ```
 
-> Package name on npm remains `@techlestial/uilerial` for backward compatibility.
-
 ## Develop
 
 ```sh
 npm install
 npm run component:build
 npm run build:vercel   # marketing + /demo
+npm run release        # publish to npm (after npm login)
 ```
 
 ## Platform
@@ -28,4 +27,4 @@ npm run build:vercel   # marketing + /demo
 - **Uilerial** — npm component library (CSS Modules)
 - **Uilerial Studio** — patterns, canvas, interactive galleries
 
-MIT · [React-Xper](https://github.com/techlestial)
+MIT · [techlestial/uilerial](https://github.com/techlestial/uilerial)

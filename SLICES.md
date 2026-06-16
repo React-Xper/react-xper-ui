@@ -5,9 +5,10 @@
 | Techlestial family rebrand (from React-Xper / Meridian) | ✅ |
 | Marketing landing + `/docs` + `/demo` | ✅ |
 | CI + npm release workflow | ✅ |
-| GitHub → `techlestial/uilerial` | ⏳ transfer |
-| Vercel → [uilerial.vercel.app](https://uilerial.vercel.app) | ⏳ deploy |
-| npm `@techlestial/uilerial@1.4.0` | ⏳ publish |
+| GitHub `techlestial/uilerial` | ✅ |
+| Vercel [uilerial.vercel.app](https://uilerial.vercel.app) | ✅ |
+| npm `@techlestial/uilerial@1.4.0` | ⏳ tag `v1.4.0` → release workflow |
+| Folder `uilerial/` | ✅ |
 
 ## Brand
 
