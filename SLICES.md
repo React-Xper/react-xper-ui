@@ -1,19 +1,16 @@
-# Meridian UI — Vertical Slices
+# Uilerial — Vertical Slices
 
 | Slice | Status |
 |-------|--------|
-| **Meridian** platform rebrand (from React Xper) | ✅ |
-| Folder rename → `meridian-ui` (local) | ⏳ close IDE lock on `react-xper-ui` |
-| Repo rename → `meridian-ui` | ✅ |
-| Marketing landing (`site/`) — UI + Studio | ✅ |
-| `/docs` static reference | ✅ |
-| `/demo` CRA showcase | ✅ |
+| Techlestial family rebrand (from React-Xper / Meridian) | ✅ |
+| Marketing landing + `/docs` + `/demo` | ✅ |
 | CI + npm release workflow | ✅ |
-| Vercel | ⏳ [meridian-ui.vercel.app](https://meridian-ui.vercel.app) |
-| npm `@meridian/ui@1.4.0` | ⏳ publish (scoped) |
+| GitHub → `techlestial/uilerial` | ⏳ transfer |
+| Vercel → [uilerial.vercel.app](https://uilerial.vercel.app) | ⏳ deploy |
+| npm `@techlestial/uilerial@1.4.0` | ⏳ publish |
 
 ## Brand
 
-- **Platform:** Meridian — precision React interfaces
-- **This repo:** Meridian UI — npm `@meridian/ui` (legacy: `react-xper-ui`)
-- **Sibling:** [Meridian Studio](https://meridian-studio.vercel.app)
+- **Studio:** [Techlestial](https://techlestial.vercel.app)
+- **This repo:** Uilerial — React UI components
+- **Sibling:** [Uilerial Studio](https://uilerial-studio.vercel.app)

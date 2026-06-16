@@ -1,7 +1,7 @@
 {
-  "short_name": "Meridian UI",
-  "name": "Meridian UI",
-  "description": "Production React components — part of the Meridian platform.",
+  "short_name": "Uilerial",
+  "name": "Uilerial",
+  "description": "Production React components — part of the Techlestial.",
   "icons": [{ "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }],
   "start_url": ".",
   "display": "standalone",

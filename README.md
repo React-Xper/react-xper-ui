@@ -1,19 +1,19 @@
-# Meridian UI
+# Uilerial
 
-**Meridian UI** — production React components for the [Meridian](https://meridian-ui.vercel.app) platform.
+**Uilerial** — production React components for the [Meridian](https://uilerial.vercel.app) platform.
 
 | Product | URL |
 |---------|-----|
-| **UI** (this repo) | [react-xper-ui.vercel.app](https://meridian-ui.vercel.app) |
-| **Studio** | [react-xper.vercel.app](https://meridian-studio.vercel.app) |
+| **UI** (this repo) | [@techlestial/uilerial.vercel.app](https://uilerial.vercel.app) |
+| **Studio** | [react-xper.vercel.app](https://uilerial-studio.vercel.app) |
 
 ## Install
 
 ```sh
-npm i react-xper-ui
+npm i @techlestial/uilerial
 ```
 
-> Package name on npm remains `react-xper-ui` for backward compatibility.
+> Package name on npm remains `@techlestial/uilerial` for backward compatibility.
 
 ## Develop
 
@@ -25,7 +25,7 @@ npm run build:vercel   # marketing + /demo
 
 ## Platform
 
-- **Meridian UI** — npm component library (CSS Modules)
-- **Meridian Studio** — patterns, canvas, interactive galleries
+- **Uilerial** — npm component library (CSS Modules)
+- **Uilerial Studio** — patterns, canvas, interactive galleries
 
-MIT · [React-Xper](https://github.com/React-Xper)
+MIT · [React-Xper](https://github.com/techlestial)

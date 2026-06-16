@@ -1,15 +1,15 @@
 {
-	"name": "@meridian/ui",
+	"name": "@techlestial/uilerial",
 	"version": "1.4.0",
-	"description": "Meridian UI — production React components for the Meridian platform (CSS Modules, TypeScript-friendly).",
+	"description": "Uilerial — production React components for the Techlestial studio (CSS Modules, TypeScript-friendly).",
 	"private": false,
-	"homepage": "https://meridian-ui.vercel.app/demo",
+	"homepage": "https://uilerial.vercel.app/demo",
 	"main": "dist",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/React-Xper/meridian-ui.git"
+		"url": "git+https://github.com/techlestial/uilerial.git"
 	},
-	"publicUrl": "https://meridian-ui.vercel.app",
+	"publicUrl": "https://uilerial.vercel.app",
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
@@ -24,16 +24,8 @@
 		"extends": "react-app"
 	},
 	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
+		"production": [">0.2%", "not dead", "not op_mini all"],
+		"development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
 	},
 	"devDependencies": {
 		"@testing-library/jest-dom": "^4.2.4",
@@ -51,25 +43,7 @@
 		"typescript-plugin-css-modules": "^5.0.0"
 	},
 	"author": "m3yevn",
-	"funFacts": [
-		"⚡ Blazing fast component",
-		"⚙️ Simple and easy composition",
-		"📦 Tiny bundle size"
-	],
-	"badges": [],
-	"techStacks": [
-		"React",
-		"CSS Modules",
-		"NPM Package",
-		"Bit.dev"
-	],
-	"screenshots": [],
-	"keywords": [
-		"meridian",
-		"meridian-ui",
-		"react-xper-ui",
-		"React UI Components"
-	],
+	"keywords": ["uilerial", "techlestial", "react", "ui", "css-modules"],
 	"dependencies": {
 		"jwt-decode": "^4.0.0"
 	}
