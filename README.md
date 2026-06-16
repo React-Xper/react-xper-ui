@@ -1,11 +1,11 @@
 # Meridian UI
 
-**Meridian UI** — production React components for the [Meridian](https://react-xper-ui.vercel.app) platform.
+**Meridian UI** — production React components for the [Meridian](https://meridian-ui.vercel.app) platform.
 
 | Product | URL |
 |---------|-----|
-| **UI** (this repo) | [react-xper-ui.vercel.app](https://react-xper-ui.vercel.app) |
-| **Studio** | [react-xper.vercel.app](https://react-xper.vercel.app) |
+| **UI** (this repo) | [react-xper-ui.vercel.app](https://meridian-ui.vercel.app) |
+| **Studio** | [react-xper.vercel.app](https://meridian-studio.vercel.app) |
 
 ## Install
 

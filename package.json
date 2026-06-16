@@ -1,15 +1,15 @@
 {
-	"name": "react-xper-ui",
+	"name": "@meridian/ui",
 	"version": "1.4.0",
 	"description": "Meridian UI — production React components for the Meridian platform (CSS Modules, TypeScript-friendly).",
 	"private": false,
-	"homepage": "https://react-xper-ui.vercel.app/demo",
+	"homepage": "https://meridian-ui.vercel.app/demo",
 	"main": "dist",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/React-Xper/react-xper-ui.git"
+		"url": "git+https://github.com/React-Xper/meridian-ui.git"
 	},
-	"publicUrl": "https://react-xper-ui.vercel.app",
+	"publicUrl": "https://meridian-ui.vercel.app",
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
