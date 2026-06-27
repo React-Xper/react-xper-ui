@@ -21,10 +21,6 @@
 		"type": "git",
 		"url": "git+https://github.com/techlestial/uilerial.git"
 	},
-	"publishConfig": {
-		"registry": "https://npm.pkg.github.com",
-		"access": "public"
-	},
 	"publicUrl": "https://uilerial.vercel.app",
 	"scripts": {
 		"start": "react-scripts start",

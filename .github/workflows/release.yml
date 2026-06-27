@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       npm_otp:
-        description: "6-digit npm OTP (for npmjs.com if 2FA blocks CI)"
+        description: "6-digit npm OTP (required for npmjs.com until bypass-2FA token is set)"
         required: false
 
 permissions:
@@ -15,7 +15,7 @@ permissions:
   packages: write
 
 jobs:
-  publish:
+  publish-github:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -23,33 +23,40 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-          cache: npm
+          registry-url: https://npm.pkg.github.com
+          scope: "@techlestial"
 
-      - name: Upgrade npm
-        run: npm install -g npm@latest
-
+      - run: npm install -g npm@latest
       - run: npm install --no-audit --no-fund
       - run: npm run component:build
 
       - name: Publish to GitHub Packages
-        run: npm publish --registry https://npm.pkg.github.com --access public
+        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  publish-npmjs:
+    runs-on: ubuntu-latest
+    needs: publish-github
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          registry-url: https://registry.npmjs.org
+          cache: npm
+
+      - run: npm install -g npm@latest
+      - run: npm install --no-audit --no-fund
+      - run: npm run component:build
 
       - name: Publish to npmjs.com
         run: |
           if [ -n "${{ github.event.inputs.npm_otp }}" ]; then
-            npm publish --registry https://registry.npmjs.org --access public --otp "${{ github.event.inputs.npm_otp }}"
+            npm publish --access public --otp "${{ github.event.inputs.npm_otp }}"
           else
-            npm publish --registry https://registry.npmjs.org --access public
+            npm publish --access public
           fi
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        continue-on-error: true
-
-      - name: Verify registry
-        run: |
-          echo "GitHub Packages:"
-          npm view @techlestial/uilerial version --registry https://npm.pkg.github.com || true
-          echo "npmjs.com:"
-          npm view @techlestial/uilerial version --registry https://registry.npmjs.org || true
