@@ -2,16 +2,15 @@
 
 | Slice | Status |
 |-------|--------|
-| Techlestial family rebrand (from React-Xper / Meridian) | ✅ |
-| Marketing landing + `/docs` + `/demo` | ✅ |
-| CI + npm release workflow | ✅ |
-| GitHub `techlestial/uilerial` | ✅ |
-| Vercel [uilerial.vercel.app](https://uilerial.vercel.app) | ✅ |
-| npm `@techlestial/uilerial@1.4.0` | ⏳ set valid `NPM_TOKEN` on repo or `npm login` + `npm run release` |
-| Folder `uilerial/` | ✅ |
+| v2 rebrand — 30+ components, design tokens | ✅ |
+| PrimeReact-style landing + docs | ✅ |
+| Studio showcase (Vite) | ✅ |
+| `component:build` → dist | ✅ |
+| Vercel [uilerial.vercel.app](https://uilerial.vercel.app) | ⏳ deploy |
+| npm `@techlestial/uilerial@2.0.0` | ⏳ `@techlestial` org on npm or `npm login` |
 
 ## Brand
 
-- **Studio:** [Techlestial](https://techlestial.vercel.app)
+- **Studio:** [Techlestial Labs](https://techlestial.vercel.app)
 - **This repo:** Uilerial — React UI components
 - **Sibling:** [Uilerial Studio](https://uilerial-studio.vercel.app)

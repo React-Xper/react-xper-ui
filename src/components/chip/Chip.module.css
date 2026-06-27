@@ -1,0 +1,1 @@
+.chip{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:var(--uil-surface-2);border:1px solid var(--uil-border);font-size:.85rem;color:var(--uil-text);font-family:var(--uil-font)}.remove{background:none;border:none;color:var(--uil-muted);cursor:pointer;padding:0;line-height:1}

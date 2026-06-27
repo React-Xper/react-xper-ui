@@ -1,16 +1,71 @@
-.rxp-ui__button {
-  min-width: 200px;
-  width: 100%;
-  min-height: 40px;
-  height: 100%;
-  padding: 12px;
-  border: none;
+@import "../styles/tokens.css";
 
-  border-radius: 5px;
-  background-color: #61dafb;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: uppercase;
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 18px;
+  border-radius: var(--uil-radius);
+  border: 1px solid transparent;
+  font-family: var(--uil-font);
+  font-size: 0.9rem;
+  font-weight: 600;
   cursor: pointer;
+  transition: background var(--uil-transition), border-color var(--uil-transition), transform var(--uil-transition);
 }
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.primary {
+  background: var(--uil-primary);
+  color: var(--uil-primary-text);
+}
+
+.primary:hover:not(:disabled) {
+  background: var(--uil-primary-hover);
+}
+
+.secondary {
+  background: var(--uil-surface-2);
+  color: var(--uil-text);
+  border-color: var(--uil-border);
+}
+
+.secondary:hover:not(:disabled) {
+  border-color: var(--uil-primary);
+}
+
+.outline {
+  background: transparent;
+  color: var(--uil-text);
+  border-color: var(--uil-border);
+}
+
+.outline:hover:not(:disabled) {
+  border-color: var(--uil-primary);
+  color: var(--uil-primary-hover);
+}
+
+.danger {
+  background: var(--uil-danger);
+  color: #fff;
+}
+
+.ghost {
+  background: transparent;
+  color: var(--uil-muted);
+}
+
+.ghost:hover:not(:disabled) {
+  color: var(--uil-text);
+  background: var(--uil-surface-2);
+}
+
+.sm { min-height: 32px; padding: 0 12px; font-size: 0.8rem; }
+.lg { min-height: 48px; padding: 0 24px; font-size: 1rem; }
+.block { width: 100%; }

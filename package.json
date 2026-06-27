@@ -1,11 +1,22 @@
 {
 	"name": "@techlestial/uilerial",
-	"version": "1.4.0",
-	"description": "Uilerial — production React components for the Techlestial studio (CSS Modules, TypeScript-friendly).",
+	"version": "2.0.0",
+	"description": "Uilerial — professional React UI component library for Techlestial Labs. 30+ components, CSS Modules, TypeScript.",
 	"private": false,
-	"homepage": "https://uilerial.vercel.app/demo",
-	"main": "dist",
+	"homepage": "https://uilerial.vercel.app",
+	"main": "dist/index.js",
+	"module": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"sideEffects": ["**/*.css"],
 	"files": ["dist", "README.md", "LICENSE"],
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"require": "./dist/index.js"
+		},
+		"./package.json": "./package.json"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/techlestial/uilerial.git"
@@ -15,11 +26,11 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"build:vercel": "cross-env PUBLIC_URL=/demo react-scripts build && node scripts/merge-marketing.mjs",
-		"component:build": "rimraf dist && mkdir dist && tsc && node scripts/import-css-modules.js",
-		"test": "react-scripts test",
+		"component:build": "rimraf dist && tsc && node scripts/import-css-modules.js && node scripts/copy-styles.mjs",
+		"test": "react-scripts test --watchAll=false --passWithNoTests",
 		"eject": "react-scripts eject",
-		"release": "npm publish --access public",
-		"clean": "rimraf node_modules"
+		"release": "npm run component:build && npm publish --access public",
+		"clean": "rimraf node_modules dist"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
@@ -27,6 +38,10 @@
 	"browserslist": {
 		"production": [">0.2%", "not dead", "not op_mini all"],
 		"development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+	},
+	"peerDependencies": {
+		"react": ">=18.0.0",
+		"react-dom": ">=18.0.0"
 	},
 	"devDependencies": {
 		"@testing-library/jest-dom": "^4.2.4",
@@ -45,7 +60,16 @@
 		"typescript-plugin-css-modules": "^5.0.0"
 	},
 	"author": "m3yevn",
-	"keywords": ["uilerial", "techlestial", "react", "ui", "css-modules"],
+	"license": "MIT",
+	"keywords": [
+		"uilerial",
+		"techlestial",
+		"react",
+		"ui",
+		"component-library",
+		"css-modules",
+		"design-system"
+	],
 	"dependencies": {
 		"jwt-decode": "^4.0.0"
 	}

@@ -1,0 +1,1 @@
+.stars{display:inline-flex;gap:4px}.star{background:none;border:none;font-size:1.25rem;cursor:pointer;color:var(--uil-border);padding:0;line-height:1}.starOn{color:var(--uil-accent)}.readonly .star{cursor:default}

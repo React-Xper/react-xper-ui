@@ -1,32 +1,47 @@
 # Uilerial
 
-> **Renamed from `react-xper-ui`.** Use this folder only — delete any leftover `react-xper-ui/` or `meridian-studio/` shells (orphan `node_modules` from the move).
+**Professional React UI component library** — 30+ components, CSS Modules, TypeScript.
 
-**Uilerial** — production React components for the [Techlestial](https://techlestial.vercel.app) studio.
+Part of [Techlestial Labs](https://techlestial.vercel.app).
 
-| Product | URL |
-|---------|-----|
-| **UI** (this repo) | [uilerial.vercel.app](https://uilerial.vercel.app) |
-| **Studio** | [uilerial-studio.vercel.app](https://uilerial-studio.vercel.app) |
+**Live:** [uilerial.vercel.app](https://uilerial.vercel.app) · **Studio:** [uilerial-studio.vercel.app](https://uilerial-studio.vercel.app)
 
 ## Install
 
-```sh
+```bash
 npm i @techlestial/uilerial
 ```
 
-## Develop
+> Requires npm access to `@techlestial` scope. Until org publish is configured, install from GitHub or vendor tarball.
 
-```sh
-npm install
-npm run component:build
-npm run build:vercel   # marketing + /demo
-npm run release        # publish to npm (after npm login)
+## Quick start
+
+```tsx
+import { Button, Card, ToastContainer } from "@techlestial/uilerial";
+
+export function App() {
+  return (
+    <>
+      <ToastContainer position="top-right" />
+      <Card title="Hello">
+        <Button variant="primary">Ship it</Button>
+      </Card>
+    </>
+  );
+}
 ```
 
-## Platform
+## Components (v2)
 
-- **Uilerial** — npm component library (CSS Modules)
-- **Uilerial Studio** — patterns, canvas, interactive galleries
+Accordion, Alert, Avatar, Badge, Breadcrumb, Button, Card, Carousel, Checkbox, Chip, DataTable, DatePicker, Dialog, Divider, Login, Message, Pagination, Panel, ProgressBar, Rating, Select, Skeleton, Spinner, Switch, Tabs, Tag, Textarea, TextInput, Toast, Toolbar, Translator.
 
-MIT · [techlestial/uilerial](https://github.com/techlestial/uilerial)
+## Build library
+
+```bash
+npm run component:build
+npm publish --access public   # needs @techlestial npm org + NPM_TOKEN
+```
+
+## License
+
+MIT · Kevin Moe Myint Myat

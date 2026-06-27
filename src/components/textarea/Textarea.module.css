@@ -1,0 +1,2 @@
+@import "../styles/tokens.css";
+.textarea{width:100%;min-height:96px;padding:12px 14px;border-radius:var(--uil-radius);border:1px solid var(--uil-border);background:var(--uil-surface);color:var(--uil-text);font-family:var(--uil-font);font-size:.9rem;resize:vertical}.textarea:focus{outline:none;border-color:var(--uil-primary);box-shadow:0 0 0 3px rgba(99,102,241,.2)}

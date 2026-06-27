@@ -3,66 +3,59 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Docs — Uilerial</title>
-    <meta name="description" content="Uilerial documentation — install, components, and publish guide." />
+    <title>Docs — Uilerial v2</title>
+    <meta name="description" content="Uilerial v2 documentation — install, components, and theming for @techlestial/uilerial." />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono&display=swap" rel="stylesheet" />
+    <link rel="canonical" href="https://uilerial.vercel.app/docs" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
+    <div class="grid-bg" aria-hidden="true"></div>
     <header class="site-header">
-      <div class="container header-inner">
-        <a href="/" class="logo">
-          <span class="logo-parent">Techlestial</span>
-          <span class="logo-product">UI</span>
-        </a>
+      <div class="container header-pill">
+        <a href="/" class="logo"><span class="logo-mark"></span><span class="logo-text">UILERIAL</span></a>
         <nav class="nav">
-          <a href="/" class="nav-product nav-product--active">UI</a>
-          <span class="nav-divider">·</span>
-          <a href="https://uilerial-studio.vercel.app" class="nav-product">Studio</a>
-          <span class="nav-divider">|</span>
-          <a href="/demo">Demo</a>
-          <a href="/docs">Docs</a>
+          <a href="/">Home</a>
+          <a href="/docs" aria-current="page">Docs</a>
+          <a href="https://uilerial-studio.vercel.app">Studio</a>
+          <a href="https://github.com/techlestial/uilerial">GitHub</a>
         </nav>
       </div>
     </header>
-    <main class="docs-main container">
-      <p class="ecosystem-badge">Techlestial · UI</p>
-      <h1>Documentation</h1>
-      <p>Install and import from the published npm package (<code>@techlestial/uilerial</code>).</p>
+    <main class="container docs-main">
+      <h1>Uilerial v2</h1>
+      <p>Professional React UI library — 30+ components, CSS Modules, TypeScript.</p>
 
       <h2>Install</h2>
-      <pre>npm i @techlestial/uilerial</pre>
+      <pre><code>npm i @techlestial/uilerial</code></pre>
+      <p>Peer dependencies: <code>react</code> and <code>react-dom</code> &gt;= 18.</p>
 
       <h2>Quick start</h2>
-      <pre>import Button from "@techlestial/uilerial/dist/components/button";
-import "@techlestial/uilerial/dist/components/button/Button.css";
+      <pre><code>import { Button, Card, DataTable, ToastContainer } from "@techlestial/uilerial";
 
 export function App() {
-  return &lt;Button color="primary"&gt;Click me&lt;/Button&gt;;
-}</pre>
+  return (
+    &lt;&gt;
+      &lt;ToastContainer position="top-right" /&gt;
+      &lt;Card title="Hello"&gt;
+        &lt;Button variant="primary"&gt;Ship it&lt;/Button&gt;
+      &lt;/Card&gt;
+    &lt;/&gt;
+  );
+}</code></pre>
 
       <h2>Components</h2>
-      <ul>
-        <li><code>Button</code> — primary, black, and custom colors</li>
-        <li><code>Select</code> — custom or <code>native</code></li>
-        <li><code>TextInput</code> — prefix, validation, numberOnly</li>
-        <li><code>Card</code> · <code>Carousel</code> · <code>DatePicker</code></li>
-        <li><code>Toast</code> + <code>ToastContainer</code></li>
-        <li><code>Accordion</code></li>
-        <li><code>TranslateProvider</code> + <code>Translatable</code></li>
-        <li><code>ThirdPartyLogin</code> — Google, Facebook, GitHub</li>
-      </ul>
+      <p>Accordion, Alert, Avatar, Badge, Breadcrumb, Button, Card, Carousel, Checkbox, Chip, DataTable, DatePicker, Dialog, Divider, Login, Message, Pagination, Panel, ProgressBar, Rating, Select, Skeleton, Spinner, Switch, Tabs, Tag, Textarea, TextInput, Toast, Toolbar, Translator.</p>
 
-      <h2>Uilerial Studio</h2>
-      <p>Patterns and canvas tools: <a href="https://uilerial-studio.vercel.app">react-xper.vercel.app</a></p>
+      <h2>Studio</h2>
+      <p>Live previews and copy-paste examples: <a href="https://uilerial-studio.vercel.app/components">uilerial-studio.vercel.app</a></p>
 
-      <h2>Publish</h2>
-      <pre>npm run component:build
-npm publish</pre>
+      <h2>Techlestial Labs</h2>
+      <p>Part of the <a href="https://techlestial.vercel.app">Techlestial Labs</a> open-source AI consultancy studio.</p>
     </main>
     <footer class="site-footer">
-      <a href="https://uilerial-studio.vercel.app">Studio</a> · <a href="https://github.com/techlestial">GitHub</a>
+      <a href="/">← Home</a> · MIT · Kevin Moe Myint Myat
     </footer>
   </body>
 </html>

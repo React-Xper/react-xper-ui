@@ -1,37 +1,37 @@
 import React from "react";
 import styles from "./Button.module.css";
 
-/**
- * @name IButton
- * @property {theme?}
- * @property {shape?}
- * @description Props interface for Button JSX element
- */
-interface IButton
-  extends React.DetailedHTMLProps<
-    React.HTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-  > {
-  type?: "submit" | "button";
-  className?: string;
+export type ButtonVariant = "primary" | "secondary" | "outline" | "danger" | "ghost";
+export type ButtonSize = "sm" | "md" | "lg";
+
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: ButtonVariant;
+  size?: ButtonSize;
+  block?: boolean;
 }
 
-/**
- * @name  Button
- * @description Button JSX element
- */
 export default function Button({
   children,
-  color,
-  type,
-  className,
+  variant = "primary",
+  size = "md",
+  block = false,
+  className = "",
+  type = "button",
   ...props
-}: IButton) {
+}: ButtonProps) {
+  const classes = [
+    styles.button,
+    styles[variant],
+    size !== "md" ? styles[size] : "",
+    block ? styles.block : "",
+    className,
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
-    <button
-      type={type}
-      className={`${className} ${styles?.["rxp-ui__button"]}`}
-      {...props}>
+    <button type={type} className={classes} {...props}>
       {children}
     </button>
   );

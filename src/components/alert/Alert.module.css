@@ -1,0 +1,2 @@
+@import "../styles/tokens.css";
+.alert{display:flex;gap:12px;padding:14px 16px;border-radius:var(--uil-radius);border:1px solid var(--uil-border);font-family:var(--uil-font);font-size:.9rem}.title{font-weight:600;margin-bottom:4px}.info{background:rgba(59,130,246,.08);border-color:rgba(59,130,246,.3)}.success{background:rgba(34,197,94,.08);border-color:rgba(34,197,94,.3)}.warning{background:rgba(245,158,11,.08);border-color:rgba(245,158,11,.3)}.danger{background:rgba(239,68,68,.08);border-color:rgba(239,68,68,.3)}

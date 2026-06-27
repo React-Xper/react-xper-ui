@@ -1,0 +1,1 @@
+.nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-family:var(--uil-font);font-size:.875rem}.item{color:var(--uil-muted)}.item a{color:var(--uil-muted);text-decoration:none}.item a:hover{color:var(--uil-primary-hover)}.sep{color:var(--uil-border)}.active{color:var(--uil-text);font-weight:600}

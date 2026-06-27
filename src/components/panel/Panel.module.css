@@ -1,0 +1,2 @@
+@import "../styles/tokens.css";
+.panel{background:var(--uil-surface);border:1px solid var(--uil-border);border-radius:var(--uil-radius-lg);overflow:hidden}.header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--uil-border);font-weight:600}.body{padding:18px}

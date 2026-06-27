@@ -1,7 +1,25 @@
-.rxp-ui__card {
-  min-width: 100px;
-  min-height: 100px;
-  height: 100%;
-  padding: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+@import "../styles/tokens.css";
+
+.card {
+  background: var(--uil-surface);
+  border: 1px solid var(--uil-border);
+  border-radius: var(--uil-radius-lg);
+  box-shadow: var(--uil-shadow);
+  overflow: hidden;
+}
+
+.header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--uil-border);
+  font-weight: 600;
+}
+
+.body {
+  padding: 20px;
+}
+
+.footer {
+  padding: 14px 20px;
+  border-top: 1px solid var(--uil-border);
+  background: var(--uil-surface-2);
 }

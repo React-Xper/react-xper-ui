@@ -3,77 +3,150 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Uilerial — React component library</title>
-    <meta name="description" content="Uilerial — production React components with CSS Modules. Part of the Techlestial for modern interfaces." />
-    <meta name="theme-color" content="#09090b" />
+    <title>Uilerial — The complete React UI suite for Techlestial Labs</title>
+    <meta
+      name="description"
+      content="Uilerial — 30+ production React components with CSS Modules and TypeScript. Part of Techlestial Labs open-source AI consultancy."
+    />
+    <meta name="theme-color" content="#050505" />
     <link rel="canonical" href="https://uilerial.vercel.app/" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
+    <div class="grid-bg" aria-hidden="true"></div>
+
     <header class="site-header">
-      <div class="container header-inner">
+      <div class="container header-pill">
         <a href="/" class="logo">
-          <span class="logo-parent">Techlestial</span>
-          <span class="logo-product">UI</span>
+          <span class="logo-mark"></span>
+          <span class="logo-text">UILERIAL</span>
         </a>
         <nav class="nav">
-          <a href="/" class="nav-product nav-product--active">UI</a>
-          <span class="nav-divider">·</span>
-          <a href="https://uilerial-studio.vercel.app" class="nav-product">Studio</a>
-          <span class="nav-divider">|</span>
-          <a href="/demo">Demo</a>
+          <a href="#features">Features</a>
+          <a href="#components">Components</a>
           <a href="/docs">Docs</a>
+          <a href="https://uilerial-studio.vercel.app">Studio</a>
           <a href="https://github.com/techlestial/uilerial">GitHub</a>
-          <a href="https://www.npmjs.com/package/@techlestial/uilerial">npm</a>
         </nav>
+        <a href="/demo" class="nav-cta">Get Started</a>
       </div>
     </header>
+
     <main>
-      <section class="hero container">
-        <p class="ecosystem-badge">Techlestial</p>
-        <h1>Interfaces, <span class="accent">engineered</span></h1>
-        <p class="hero-lead">
-          Uilerial is a production-grade React component library — CSS Modules,
-          TypeScript-friendly, tree-shakeable. Built for teams who ship.
-        </p>
-        <div class="install-block">npm i @techlestial/uilerial</div>
-        <p style="margin-top:24px">
-          <a class="btn" href="/demo">Component demo</a>
-          <a class="btn btn-outline" href="/docs">Documentation</a>
-        </p>
+      <section class="hero">
+        <div class="container hero-inner">
+          <span class="status-badge"><span class="status-dot"></span> Techlestial Labs</span>
+          <h1>The most complete UI suite for <span class="accent">React</span></h1>
+          <p class="hero-lead">
+            Elevate your applications with Uilerial — 30+ customizable, accessible components.
+            CSS Modules, TypeScript-friendly, tree-shakeable. Built for teams who industrialize AI.
+          </p>
+          <div class="install-block">npm i @techlestial/uilerial</div>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="/demo">Get Started</a>
+            <a class="btn btn-ghost" href="https://github.com/techlestial/uilerial">Give a Star</a>
+          </div>
+        </div>
       </section>
 
-      <section class="container ecosystem-grid">
-        <article class="eco-card">
-          <h3>Uilerial</h3>
-          <p>npm package — Button, Select, Toast, Carousel, Accordion, and i18n primitives.</p>
-          <a class="btn" href="/docs">Read docs →</a>
-        </article>
-        <article class="eco-card">
-          <h3>Uilerial Studio</h3>
-          <p>Patterns, Konva canvas editors, and interactive galleries for modern React apps.</p>
-          <a class="btn btn-outline" href="https://uilerial-studio.vercel.app">Open Studio →</a>
-        </article>
+      <section class="preview-strip">
+        <div class="container preview-card">
+          <div class="preview-ui">
+            <div class="preview-row">
+              <span class="preview-badge">Live</span>
+              <span class="preview-chip">Button</span>
+              <span class="preview-chip">DataTable</span>
+              <span class="preview-chip">Dialog</span>
+            </div>
+            <div class="preview-table">
+              <div class="preview-table-head"><span>Name</span><span>Status</span><span>Activity</span></div>
+              <div class="preview-table-row"><span>Amanda Williams</span><span class="pill success">Active</span><span>●●●○○</span></div>
+              <div class="preview-table-row"><span>Dashboard</span><span class="pill">Panel</span><span>●●●●○</span></div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section class="container">
-        <div class="grid">
-          <article class="card"><h3>Button</h3><p>Primary actions with color variants.</p></article>
-          <article class="card"><h3>Select & TextInput</h3><p>Forms — native and custom modes.</p></article>
-          <article class="card"><h3>Toast</h3><p>Stacked notifications with auto-dismiss.</p></article>
-          <article class="card"><h3>Carousel</h3><p>Slide content with arrow controls.</p></article>
-          <article class="card"><h3>Accordion</h3><p>Collapsible dense layouts.</p></article>
-          <article class="card"><h3>Translator</h3><p>i18n provider + Translatable.</p></article>
+      <section class="section" id="features">
+        <div class="container">
+          <h2 class="section-title">Features</h2>
+          <p class="section-sub">Prime-grade DX — open source, MIT licensed, studio-backed.</p>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="feature-icon">◆</div>
+              <h3>30+ UI Components</h3>
+              <p>Button, DataTable, Dialog, Tabs, Toast, and every primitive your product needs.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon">◇</div>
+              <h3>Styled &amp; Themeable</h3>
+              <p>CSS Modules with design tokens — customize or bring your own Tailwind layer.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon">○</div>
+              <h3>Accessibility</h3>
+              <p>Semantic markup, ARIA roles, keyboard-friendly controls out of the box.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon">□</div>
+              <h3>TypeScript</h3>
+              <p>Typed props and exports — IntelliSense in every IDE.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon">△</div>
+              <h3>Studio Showcase</h3>
+              <p>Live component browser at Uilerial Studio — copy, paste, ship.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon">☆</div>
+              <h3>Enterprise Ready</h3>
+              <p>MIT license, CI-tested, published under <code>@techlestial</code> on npm.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="components">
+        <div class="container">
+          <h2 class="section-title">Component catalog</h2>
+          <div class="component-tags">
+            <span>Button</span><span>Card</span><span>Badge</span><span>Avatar</span><span>Chip</span>
+            <span>Alert</span><span>Dialog</span><span>Tabs</span><span>DataTable</span><span>Pagination</span>
+            <span>Select</span><span>TextInput</span><span>Textarea</span><span>Checkbox</span><span>Switch</span>
+            <span>Toast</span><span>Carousel</span><span>Accordion</span><span>Rating</span><span>Spinner</span>
+            <span>ProgressBar</span><span>Skeleton</span><span>Breadcrumb</span><span>Panel</span><span>Toolbar</span>
+            <span>Divider</span><span>Tag</span><span>Message</span><span>DatePicker</span><span>Login</span>
+          </div>
+          <p class="section-sub" style="margin-top: 32px">
+            <a href="https://uilerial-studio.vercel.app/components">Browse all in Studio →</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="container">
+          <h2>Ready to build?</h2>
+          <p>Install Uilerial and open the interactive studio — no lock-in, fork freely.</p>
+          <a class="btn btn-primary" href="https://uilerial-studio.vercel.app">Open Uilerial Studio</a>
         </div>
       </section>
     </main>
+
     <footer class="site-footer">
-      <a href="https://uilerial.vercel.app">UI</a>
-      <a href="https://uilerial-studio.vercel.app">Studio</a>
-      <a href="https://github.com/techlestial">GitHub</a>
-      · MIT · Kevin Moe Myint Myat
+      <div class="container">
+        <a href="https://techlestial.vercel.app">Techlestial Labs</a>
+        <a href="https://uilerial-studio.vercel.app">Studio</a>
+        <a href="/docs">Docs</a>
+        <a href="https://www.npmjs.com/package/@techlestial/uilerial">npm</a>
+        <p>MIT · Kevin Moe Myint Myat</p>
+      </div>
     </footer>
   </body>
 </html>

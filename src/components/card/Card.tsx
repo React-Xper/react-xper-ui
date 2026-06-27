@@ -1,21 +1,23 @@
 import React from "react";
 import styles from "./Card.module.css";
 
-/**
- * @name  Card
- * @description Card JSX element
- */
+export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+  title?: string;
+  footer?: React.ReactNode;
+}
+
 export default function Card({
   children,
+  title,
+  footer,
   className = "",
   ...props
-}: React.DetailedHTMLProps<
-  React.HTMLAttributes<HTMLDivElement>,
-  HTMLDivElement
->) {
+}: CardProps) {
   return (
-    <div className={`${className} ${styles?.["rxp-ui__card"]}`} {...props}>
-      {children}
+    <div className={`${styles.card} ${className}`} {...props}>
+      {title && <div className={styles.header}>{title}</div>}
+      <div className={styles.body}>{children}</div>
+      {footer && <div className={styles.footer}>{footer}</div>}
     </div>
   );
 }

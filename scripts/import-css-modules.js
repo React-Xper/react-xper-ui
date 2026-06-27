@@ -1,33 +1,47 @@
 const componentFolder = "./src/components";
-const distFolder = "./dist";
+const distFolder = "./dist/components";
 const fs = require("fs");
+const path = require("path");
 
-const loadCssToDist = (componentName) => (cssName) =>
-  fs.copyFile(
-    `${componentFolder}/${componentName}/${cssName}`,
-    `${distFolder}/${componentName}/${cssName}`,
-    (err) => {
-      if (err) {
-        return console.error(err);
-      }
-    }
-  );
-
-const processComponentFolder = (componentName) => {
-  const cssFiles = fs
-    .readdirSync(`${componentFolder}/${componentName}`)
-    .filter((fn) => fn.endsWith(".module.css"));
-
-  if (cssFiles.length) {
-    cssFiles.forEach(loadCssToDist(componentName));
-  }
+const copyCss = (componentName, cssName) => {
+  const src = path.join(componentFolder, componentName, cssName);
+  const destDir = path.join(distFolder, componentName);
+  const dest = path.join(destDir, cssName);
+  if (!fs.existsSync(src)) return;
+  fs.mkdirSync(destDir, { recursive: true });
+  fs.copyFileSync(src, dest);
 };
 
-fs.readdir(componentFolder, (err, list) => {
-  if (err) {
-    return console.error(err);
-  }
+const processComponentFolder = (componentName) => {
+  const dir = path.join(componentFolder, componentName);
+  if (!fs.statSync(dir).isDirectory()) return;
 
-  const folders = list.filter((name) => !name.includes(".ts"));
-  folders.forEach(processComponentFolder);
+  const cssFiles = fs.readdirSync(dir).filter((fn) => fn.endsWith(".module.css"));
+  cssFiles.forEach((cssName) => copyCss(componentName, cssName));
+};
+
+fs.mkdirSync(distFolder, { recursive: true });
+
+fs.readdirSync(componentFolder).forEach((name) => {
+  if (name === "styles" || name.includes(".ts")) return;
+  processComponentFolder(name);
 });
+
+// third-party subfolders
+const thirdParty = path.join(componentFolder, "third-party");
+if (fs.existsSync(thirdParty)) {
+  fs.readdirSync(thirdParty).forEach((name) => {
+    const sub = path.join(thirdParty, name);
+    if (!fs.statSync(sub).isDirectory()) return;
+    const cssFiles = fs.readdirSync(sub).filter((fn) => fn.endsWith(".module.css"));
+    const destName = path.join("third-party", name);
+    cssFiles.forEach((cssName) => {
+      const src = path.join(sub, cssName);
+      const destDir = path.join(distFolder, destName);
+      fs.mkdirSync(destDir, { recursive: true });
+      fs.copyFileSync(src, path.join(destDir, cssName));
+    });
+  });
+}
+
+console.log("CSS modules copied to dist/components");
