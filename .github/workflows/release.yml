@@ -28,7 +28,7 @@ jobs:
       - name: Upgrade npm
         run: npm install -g npm@latest
 
-      - run: npm ci
+      - run: npm install --no-audit --no-fund
       - run: npm run component:build
 
       - name: Publish to GitHub Packages
