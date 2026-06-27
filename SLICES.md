@@ -7,7 +7,8 @@
 | Studio showcase (Vite) | ✅ |
 | `component:build` → dist | ✅ |
 | Vercel [uilerial.vercel.app](https://uilerial.vercel.app) | ⏳ deploy |
-| npm `@techlestial/uilerial@2.0.0` | ⏳ `@techlestial` org on npm or `npm login` |
+| npm `@techlestial/uilerial@2.0.0` on GitHub Packages | ✅ |
+| npm `@techlestial/uilerial@2.0.0` on npmjs.com | ⏳ run Release workflow with `npm_otp` or Bypass 2FA token |
 
 ## Brand
 

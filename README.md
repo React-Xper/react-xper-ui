@@ -9,10 +9,14 @@ Part of [Techlestial Labs](https://techlestial.vercel.app).
 ## Install
 
 ```bash
+# npmjs.com (once published)
 npm i @techlestial/uilerial
+
+# GitHub Packages (live now)
+npm i @techlestial/uilerial --registry=https://npm.pkg.github.com
 ```
 
-> Requires npm access to `@techlestial` scope. Until org publish is configured, install from GitHub or vendor tarball.
+> **npmjs.com:** CI publish needs a granular token with **Bypass 2FA** on [npmjs.com/settings/~tokens](https://www.npmjs.com/settings/~tokens), or re-run the Release workflow with your 6-digit OTP: `gh workflow run release.yml --repo techlestial/uilerial -f npm_otp=YOUR_CODE`
 
 ## Quick start
 

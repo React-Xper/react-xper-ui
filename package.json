@@ -30,6 +30,7 @@
 		"test": "react-scripts test --watchAll=false --passWithNoTests",
 		"eject": "react-scripts eject",
 		"release": "npm run component:build && npm publish --access public",
+		"release:npm": "node scripts/publish-npm.mjs",
 		"clean": "rimraf node_modules dist"
 	},
 	"eslintConfig": {

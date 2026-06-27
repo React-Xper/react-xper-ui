@@ -38,6 +38,7 @@ jobs:
   publish-npmjs:
     runs-on: ubuntu-latest
     needs: publish-github
+    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
 
