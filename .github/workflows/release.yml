@@ -4,10 +4,15 @@ on:
   push:
     tags: ["v*"]
   workflow_dispatch:
+    inputs:
+      npm_otp:
+        description: "6-digit npm OTP (for npmjs.com if 2FA blocks CI)"
+        required: false
 
 permissions:
   id-token: write
   contents: read
+  packages: write
 
 jobs:
   publish:
@@ -18,7 +23,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-          registry-url: https://registry.npmjs.org
           cache: npm
 
       - name: Upgrade npm
@@ -27,7 +31,25 @@ jobs:
       - run: npm ci
       - run: npm run component:build
 
-      - name: Publish to npm
-        run: npm publish --access public --provenance
+      - name: Publish to GitHub Packages
+        run: npm publish --registry https://npm.pkg.github.com --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish to npmjs.com
+        run: |
+          if [ -n "${{ github.event.inputs.npm_otp }}" ]; then
+            npm publish --registry https://registry.npmjs.org --access public --otp "${{ github.event.inputs.npm_otp }}"
+          else
+            npm publish --registry https://registry.npmjs.org --access public
+          fi
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        continue-on-error: true
+
+      - name: Verify registry
+        run: |
+          echo "GitHub Packages:"
+          npm view @techlestial/uilerial version --registry https://npm.pkg.github.com || true
+          echo "npmjs.com:"
+          npm view @techlestial/uilerial version --registry https://registry.npmjs.org || true
